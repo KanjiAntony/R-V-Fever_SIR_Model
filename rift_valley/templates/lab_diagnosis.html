@@ -1,0 +1,1432 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                            <h2>LABORATORY DIAGNOSIS (PCR, VNT, ELISA)</h2>
+
+                                    <tr>
+                                        <td><b>PCR for 1,000 samples (For RVF, Rabbies & Tryps)</b></td>
+                                        <td><b>Quantity</b></td>
+                                        <td><b>Unit Cost</b></td>
+                                        <td><b>Total Cost</b></td>
+                                        <td><b>Lifespan (years)</b></td>
+                                        <td><b>Salvage value</b></td>
+                                        <td><b>Annual Depreciation</b></td>
+                                        <td><b>Annual cost (Kshs)</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>RT-PCR Machine</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RT_PCR_Machine_quantity" id="RT_PCR_Machine_quantity" value="{{RT_PCR_Machine_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RT_PCR_Machine_unit_cost" id="RT_PCR_Machine_unit_cost" value="{{RT_PCR_Machine_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RT_PCR_Machine_total_cost" id="RT_PCR_Machine_total_cost" value="{{RT_PCR_Machine_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RT_PCR_Machine_lifespan" id="RT_PCR_Machine_lifespan" value="{{RT_PCR_Machine_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RT_PCR_Machine_salvage_value" id="RT_PCR_Machine_salvage_value" value="{{RT_PCR_Machine_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RT_PCR_Machine_annual_depreciation" id="RT_PCR_Machine_annual_depreciation" value="{{RT_PCR_Machine_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RT_PCR_Machine_annual_cost" id="RT_PCR_Machine_annual_cost" value="{{RT_PCR_Machine_annual_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Pipettes</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="pipettes_quantity" id="pipettes_quantity" value="{{pipettes_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="pipettes_unit_cost" id="pipettes_unit_cost" value="{{pipettes_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="pipettes_total_cost" id="pipettes_total_cost" value="{{pipettes_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="pipettes_lifespan" id="pipettes_lifespan" value="{{pipettes_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="pipettes_salvage_value" id="pipettes_salvage_value" value="{{pipettes_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="pipettes_annual_depreciation" id="pipettes_annual_depreciation" value="{{pipettes_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="pipettes_annual_cost" id="pipettes_annual_cost" value="{{pipettes_annual_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Reagents and Primers</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="reagents_quantity" id="reagents_quantity" value="{{reagents_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="reagents_unit_cost" id="reagents_unit_cost" value="{{reagents_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="reagents_total_cost" id="reagents_total_cost" value="{{reagents_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="reagents_lifespan" id="reagents_lifespan" value="{{reagents_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="reagents_salvage_value" id="reagents_salvage_value" value="{{reagents_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="reagents_annual_depreciation" id="reagents_annual_depreciation" value="{{reagents_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="reagents_annual_cost" id="reagents_annual_cost" value="{{reagents_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Consumables</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="consumables_quantity" id="consumables_quantity" value="{{consumables_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="consumables_unit_cost" id="consumables_unit_cost" value="{{consumables_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="consumables_total_cost" id="consumables_total_cost" value="{{consumables_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="consumables_lifespan" id="consumables_lifespan" value="{{consumables_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="consumables_salvage_value" id="consumables_salvage_value" value="{{consumables_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="consumables_annual_depreciation" id="consumables_annual_depreciation" value="{{consumables_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="consumables_annual_cost" id="consumables_annual_cost" value="{{consumables_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Computer</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="computer_quantity" id="computer_quantity" value="{{computer_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="computer_unit_cost" id="computer_unit_cost" value="{{computer_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="computer_total_cost" id="computer_total_cost" value="{{computer_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="computer_lifespan" id="computer_lifespan" value="{{computer_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="computer_salvage_value" id="computer_salvage_value" value="{{computer_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="computer_annual_depreciation" id="computer_annual_depreciation" value="{{computer_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="computer_annual_cost" id="computer_annual_cost" value="{{computer_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4 staff working 2 full days in a week throughout the year)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="PCR_staff_working_quantity" id="PCR_staff_working_quantity" value="{{PCR_staff_working_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="PCR_staff_working_unit_cost" id="PCR_staff_working_unit_cost" value="{{PCR_staff_working_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="PCR_staff_working_total_cost" id="PCR_staff_working_total_cost" value="{{PCR_staff_working_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="PCR_staff_working_lifespan" id="PCR_staff_working_lifespan" value="{{PCR_staff_working_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="PCR_staff_working_salvage_value" id="PCR_staff_working_salvage_value" value="{{PCR_staff_working_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="PCR_staff_working_annual_depreciation" id="PCR_staff_working_annual_depreciation" value="{{PCR_staff_working_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="PCR_staff_working_annual_cost" id="PCR_staff_working_annual_cost" value="{{PCR_staff_working_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <b>Virus Neutralization Test (VNT) for 1,000 samples</b>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Incubator</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incubator_quantity" id="incubator_quantity" value="{{incubator_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incubator_unit_cost" id="incubator_unit_cost" value="{{incubator_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incubator_total_cost" id="incubator_total_cost" value="{{incubator_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incubator_lifespan" id="incubator_lifespan" value="{{incubator_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incubator_salvage_value" id="incubator_salvage_value" value="{{incubator_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incubator_annual_depreciation" id="incubator_annual_depreciation" value="{{incubator_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incubator_annual_cost" id="incubator_annual_cost" value="{{incubator_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Dissection Microscope</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="dissection_microscope_quantity" id="dissection_microscope_quantity" value="{{dissection_microscope_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="dissection_microscope_unit_cost" id="dissection_microscope_unit_cost" value="{{dissection_microscope_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="dissection_microscope_total_cost" id="dissection_microscope_total_cost" value="{{dissection_microscope_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="dissection_microscope_lifespan" id="dissection_microscope_lifespan" value="{{dissection_microscope_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="dissection_microscope_salvage_value" id="dissection_microscope_salvage_value" value="{{dissection_microscope_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="dissection_microscope_annual_depreciation" id="dissection_microscope_annual_depreciation" value="{{dissection_microscope_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="dissection_microscope_annual_cost" id="dissection_microscope_annual_cost" value="{{dissection_microscope_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Reagents (media, controls, virus culture, continuous cell lines)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_reagents_quantity" id="VNT_reagents_quantity" value="{{VNT_reagents_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_reagents_unit_cost" id="VNT_reagents_unit_cost" value="{{VNT_reagents_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_reagents_total_cost" id="VNT_reagents_total_cost" value="{{VNT_reagents_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_reagents_lifespan" id="VNT_reagents_lifespan" value="{{VNT_reagents_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_reagents_salvage_value" id="VNT_reagents_salvage_value" value="{{VNT_reagents_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_reagents_annual_depreciation" id="VNT_reagents_annual_depreciation" value="{{VNT_reagents_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_reagents_annual_cost" id="VNT_reagents_annual_cost" value="{{VNT_reagents_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Consumables (plates and pipettes)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_consumables_quantity" id="VNT_consumables_quantity" value="{{VNT_consumables_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_consumables_unit_cost" id="VNT_consumables_unit_cost" value="{{VNT_consumables_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_consumables_total_cost" id="VNT_consumables_total_cost" value="{{VNT_consumables_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_consumables_lifespan" id="VNT_consumables_lifespan" value="{{VNT_consumables_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_consumables_salvage_value" id="VNT_consumables_salvage_value" value="{{VNT_consumables_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_consumables_annual_depreciation" id="VNT_consumables_annual_depreciation" value="{{VNT_consumables_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_consumables_annual_cost" id="VNT_consumables_annual_cost" value="{{VNT_consumables_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4 staff working 2 full days in a week throughout the year)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_staff_working_quantity" id="VNT_staff_working_quantity" value="{{VNT_staff_working_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_staff_working_unit_cost" id="VNT_staff_working_unit_cost" value="{{VNT_staff_working_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_staff_working_total_cost" id="VNT_staff_working_total_cost" value="{{VNT_staff_working_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_staff_working_lifespan" id="VNT_staff_working_lifespan" value="{{VNT_staff_working_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_staff_working_salvage_value" id="VNT_staff_working_salvage_value" value="{{VNT_staff_working_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_staff_working_annual_depreciation" id="VNT_staff_working_annual_depreciation" value="{{VNT_staff_working_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="VNT_staff_working_annual_cost" id="VNT_staff_working_annual_cost" value="{{VNT_staff_working_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <b>ELISA for 1,000 samples</b>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>ELISA Reader</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_reader_quantity" id="ELISA_reader_quantity" value="{{ELISA_reader_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_reader_unit_cost" id="ELISA_reader_unit_cost" value="{{ELISA_reader_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_reader_total_cost" id="ELISA_reader_total_cost" value="{{ELISA_reader_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_reader_lifespan" id="ELISA_reader_lifespan" value="{{ELISA_reader_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_reader_salvage_value" id="ELISA_reader_salvage_value" value="{{ELISA_reader_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_reader_annual_depreciation" id="ELISA_reader_annual_depreciation" value="{{ELISA_reader_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_reader_annual_cost" id="ELISA_reader_annual_cost" value="{{ELISA_reader_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>ELISA kits</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_kits_quantity" id="ELISA_kits_quantity" value="{{ELISA_kits_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_kits_unit_cost" id="ELISA_kits_unit_cost" value="{{ELISA_kits_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_kits_total_cost" id="ELISA_kits_total_cost" value="{{ELISA_kits_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_kits_lifespan" id="ELISA_kits_lifespan" value="{{ELISA_kits_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_kits_salvage_value" id="ELISA_kits_salvage_value" value="{{ELISA_kits_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_kits_annual_depreciation" id="ELISA_kits_annual_depreciation" value="{{ELISA_kits_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_kits_annual_cost" id="ELISA_kits_annual_cost" value="{{ELISA_kits_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Computer</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_computer_quantity" id="ELISA_computer_quantity" value="{{ELISA_computer_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_computer_unit_cost" id="ELISA_computer_unit_cost" value="{{ELISA_computer_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_computer_total_cost" id="ELISA_computer_total_cost" value="{{ELISA_computer_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_computer_lifespan" id="ELISA_computer_lifespan" value="{{ELISA_computer_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_computer_salvage_value" id="ELISA_computer_salvage_value" value="{{ELISA_computer_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_computer_annual_depreciation" id="ELISA_computer_annual_depreciation" value="{{ELISA_computer_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_computer_annual_cost" id="ELISA_computer_annual_cost" value="{{ELISA_computer_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Incubator shaker</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_incubator_shaker_quantity" id="ELISA_incubator_shaker_quantity" value="{{ELISA_incubator_shaker_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_incubator_shaker_unit_cost" id="ELISA_incubator_shaker_unit_cost" value="{{ELISA_incubator_shaker_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_incubator_shaker_total_cost" id="ELISA_incubator_shaker_total_cost" value="{{ELISA_incubator_shaker_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_incubator_shaker_lifespan" id="ELISA_incubator_shaker_lifespan" value="{{ELISA_incubator_shaker_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_incubator_shaker_salvage_value" id="ELISA_incubator_shaker_salvage_value" value="{{ELISA_incubator_shaker_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_incubator_shaker_annual_depreciation" id="ELISA_incubator_shaker_annual_depreciation" value="{{ELISA_incubator_shaker_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_incubator_shaker_annual_cost" id="ELISA_incubator_shaker_annual_cost" value="{{ELISA_incubator_shaker_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Platewasher</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_platewasher_quantity" id="ELISA_platewasher_quantity" value="{{ELISA_platewasher_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_platewasher_unit_cost" id="ELISA_platewasher_unit_cost" value="{{ELISA_platewasher_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_platewasher_total_cost" id="ELISA_platewasher_total_cost" value="{{ELISA_platewasher_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_platewasher_lifespan" id="ELISA_platewasher_lifespan" value="{{ELISA_platewasher_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_platewasher_salvage_value" id="ELISA_platewasher_salvage_value" value="{{ELISA_platewasher_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_platewasher_annual_depreciation" id="ELISA_platewasher_annual_depreciation" value="{{ELISA_platewasher_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_platewasher_annual_cost" id="ELISA_platewasher_annual_cost" value="{{ELISA_platewasher_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Consumables (plasticware, glassware, stationery)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_consumables_quantity" id="ELISA_consumables_quantity" value="{{ELISA_consumables_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_consumables_unit_cost" id="ELISA_consumables_unit_cost" value="{{ELISA_consumables_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_consumables_total_cost" id="ELISA_consumables_total_cost" value="{{ELISA_consumables_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_consumables_lifespan" id="ELISA_consumables_lifespan" value="{{ELISA_consumables_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_consumables_salvage_value" id="ELISA_consumables_salvage_value" value="{{ELISA_consumables_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_consumables_annual_depreciation" id="ELISA_consumables_annual_depreciation" value="{{ELISA_consumables_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_consumables_annual_cost" id="ELISA_consumables_annual_cost" value="{{ELISA_consumables_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4 staff working 3 full days in a week throughout the year)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_staff_working_quantity" id="ELISA_staff_working_quantity" value="{{ELISA_staff_working_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_staff_working_unit_cost" id="ELISA_staff_working_unit_cost" value="{{ELISA_staff_working_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_staff_working_total_cost" id="ELISA_staff_working_total_cost" value="{{ELISA_staff_working_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_staff_working_lifespan" id="ELISA_staff_working_lifespan" value="{{ELISA_staff_working_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_staff_working_salvage_value" id="ELISA_staff_working_salvage_value" value="{{ELISA_staff_working_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_staff_working_annual_depreciation" id="ELISA_staff_working_annual_depreciation" value="{{ELISA_staff_working_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ELISA_staff_working_annual_cost" id="ELISA_staff_working_annual_cost" value="{{ELISA_staff_working_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <b>For all diseases (RVF, Rabbies, Tryps)</b>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Standby laboratory generator</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laboratory_generator_quantity" id="laboratory_generator_quantity" value="{{laboratory_generator_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laboratory_generator_unit_cost" id="laboratory_generator_unit_cost" value="{{laboratory_generator_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laboratory_generator_total_cost" id="laboratory_generator_total_cost" value="{{laboratory_generator_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laboratory_generator_lifespan" id="laboratory_generator_lifespan" value="{{laboratory_generator_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laboratory_generator_salvage_value" id="laboratory_generator_salvage_value" value="{{laboratory_generator_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laboratory_generator_annual_depreciation" id="laboratory_generator_annual_depreciation" value="{{laboratory_generator_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laboratory_generator_annual_cost" id="laboratory_generator_annual_cost" value="{{laboratory_generator_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Freezers</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_quantity" id="freezers_quantity" value="{{freezers_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_unit_cost" id="freezers_unit_cost" value="{{freezers_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_total_cost" id="freezers_total_cost" value="{{freezers_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_lifespan" id="freezers_lifespan" value="{{freezers_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_salvage_value" id="freezers_salvage_value" value="{{freezers_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_annual_depreciation" id="freezers_annual_depreciation" value="{{freezers_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_annual_cost" id="freezers_annual_cost" value="{{freezers_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Refrigerators</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerators_quantity" id="refrigerators_quantity" value="{{refrigerators_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerators_unit_cost" id="refrigerators_unit_cost" value="{{refrigerators_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerators_total_cost" id="refrigerators_total_cost" value="{{refrigerators_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerators_lifespan" id="refrigerators_lifespan" value="{{refrigerators_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerators_salvage_value" id="refrigerators_salvage_value" value="{{refrigerators_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerators_annual_depreciation" id="refrigerators_annual_depreciation" value="{{refrigerators_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerators_annual_cost" id="refrigerators_annual_cost" value="{{refrigerators_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Water</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_quantity" id="water_quantity" value="{{water_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_unit_cost" id="water_unit_cost" value="{{water_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_total_cost" id="water_total_cost" value="{{water_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_lifespan" id="water_lifespan" value="{{water_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_salvage_value" id="water_salvage_value" value="{{water_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_annual_depreciation" id="water_annual_depreciation" value="{{water_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_annual_cost" id="water_annual_cost" value="{{water_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Electricity</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="electricity_quantity" id="electricity_quantity" value="{{electricity_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="electricity_unit_cost" id="electricity_unit_cost" value="{{electricity_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="electricity_total_cost" id="electricity_total_cost" value="{{electricity_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="electricity_lifespan" id="electricity_lifespan" value="{{electricity_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="electricity_salvage_value" id="electricity_salvage_value" value="{{electricity_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="electricity_annual_depreciation" id="electricity_annual_depreciation" value="{{electricity_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="electricity_annual_cost" id="electricity_annual_cost" value="{{electricity_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Equipment calibration and maintenance</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="equipment_calibration_quantity" id="equipment_calibration_quantity" value="{{equipment_calibration_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="equipment_calibration_unit_cost" id="equipment_calibration_unit_cost" value="{{equipment_calibration_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="equipment_calibration_total_cost" id="equipment_calibration_total_cost" value="{{equipment_calibration_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="equipment_calibration_lifespan" id="equipment_calibration_lifespan" value="{{equipment_calibration_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="equipment_calibration_salvage_value" id="equipment_calibration_salvage_value" value="{{equipment_calibration_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="equipment_calibration_annual_depreciation" id="equipment_calibration_annual_depreciation" value="{{equipment_calibration_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="equipment_calibration_annual_cost" id="equipment_calibration_annual_cost" value="{{equipment_calibration_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Expert consultation</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="expert_consultation_quantity" id="expert_consultation_quantity" value="{{expert_consultation_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="expert_consultation_unit_cost" id="expert_consultation_unit_cost" value="{{expert_consultation_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="expert_consultation_total_cost" id="expert_consultation_total_cost" value="{{expert_consultation_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="expert_consultation_lifespan" id="expert_consultation_lifespan" value="{{expert_consultation_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="expert_consultation_salvage_value" id="expert_consultation_salvage_value" value="{{expert_consultation_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="expert_consultation_annual_depreciation" id="expert_consultation_annual_depreciation" value="{{expert_consultation_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="expert_consultation_annual_cost" id="expert_consultation_annual_cost" value="{{expert_consultation_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Water still</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_still_quantity" id="water_still_quantity" value="{{water_still_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_still_unit_cost" id="water_still_unit_cost" value="{{water_still_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_still_total_cost" id="water_still_total_cost" value="{{water_still_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_still_lifespan" id="water_still_lifespan" value="{{water_still_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_still_salvage_value" id="water_still_salvage_value" value="{{water_still_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_still_annual_depreciation" id="water_still_annual_depreciation" value="{{water_still_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="water_still_annual_cost" id="water_still_annual_cost" value="{{water_still_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Micropore filtration system</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="micropore_filtration_system_quantity" id="micropore_filtration_system_quantity" value="{{micropore_filtration_system_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="micropore_filtration_system_unit_cost" id="micropore_filtration_system_unit_cost" value="{{micropore_filtration_system_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="micropore_filtration_system_total_cost" id="micropore_filtration_system_total_cost" value="{{micropore_filtration_system_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="micropore_filtration_system_lifespan" id="micropore_filtration_system_lifespan" value="{{micropore_filtration_system_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="micropore_filtration_system_salvage_value" id="micropore_filtration_system_salvage_value" value="{{micropore_filtration_system_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="micropore_filtration_system_annual_depreciation" id="micropore_filtration_system_annual_depreciation" value="{{micropore_filtration_system_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="micropore_filtration_system_annual_cost" id="micropore_filtration_system_annual_cost" value="{{micropore_filtration_system_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Generator fuel 60 litres per day for 100 days for CVL and RVF lab</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generator_fuel_quantity" id="generator_fuel_quantity" value="{{generator_fuel_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generator_fuel_unit_cost" id="generator_fuel_unit_cost" value="{{generator_fuel_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generator_fuel_total_cost" id="generator_fuel_total_cost" value="{{generator_fuel_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generator_fuel_lifespan" id="generator_fuel_lifespan" value="{{generator_fuel_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generator_fuel_salvage_value" id="generator_fuel_salvage_value" value="{{generator_fuel_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generator_fuel_annual_depreciation" id="generator_fuel_annual_depreciation" value="{{generator_fuel_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generator_fuel_annual_cost" id="generator_fuel_annual_cost" value="{{generator_fuel_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <b>TRAINING OF LABORATORY STAFF</b>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4 staff on VNT, PCR and ELISA including reagent preparation and standardisation for 15 days</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_quantity" id="lab_staff_training_quantity" value="{{lab_staff_training_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_unit_cost" id="lab_staff_training_unit_cost" value="{{lab_staff_training_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_total_cost" id="lab_staff_training_total_cost" value="{{lab_staff_training_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_lifespan" id="lab_staff_training_lifespan" value="{{lab_staff_training_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_salvage_value" id="lab_staff_training_salvage_value" value="{{lab_staff_training_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_annual_depreciation" id="lab_staff_training_annual_depreciation" value="{{lab_staff_training_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_annual_cost" id="lab_staff_training_annual_cost" value="{{lab_staff_training_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>DSA</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_DSA_training_quantity" id="lab_staff_DSA_training_quantity" value="{{lab_staff_DSA_training_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_DSA_training_unit_cost" id="lab_staff_DSA_training_unit_cost" value="{{lab_staff_DSA_training_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_DSA_training_total_cost" id="lab_staff_DSA_training_total_cost" value="{{lab_staff_DSA_training_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_DSA_training_lifespan" id="lab_staff_DSA_training_lifespan" value="{{lab_staff_DSA_training_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_DSA_training_salvage_value" id="lab_staff_DSA_training_salvage_value" value="{{lab_staff_DSA_training_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_DSA_training_annual_depreciation" id="lab_staff_DSA_training_annual_depreciation" value="{{lab_staff_DSA_training_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_DSA_training_annual_cost" id="lab_staff_DSA_training_annual_cost" value="{{lab_staff_DSA_training_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                <tr>
+                                        <td>Transport @ 20 litres per day@ KSh. 120 per litre</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_transport_quantity" id="lab_staff_training_transport_quantity" value="{{lab_staff_training_transport_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_transport_unit_cost" id="lab_staff_training_transport_unit_cost" value="{{lab_staff_training_transport_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_transport_total_cost" id="lab_staff_training_transport_total_cost" value="{{lab_staff_training_transport_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_transport_lifespan" id="lab_staff_training_transport_lifespan" value="{{lab_staff_training_transport_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_transport_salvage_value" id="lab_staff_training_transport_salvage_value" value="{{lab_staff_training_transport_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_transport_annual_depreciation" id="lab_staff_training_transport_annual_depreciation" value="{{lab_staff_training_transport_annual_depreciation}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_staff_training_transport_annual_cost" id="lab_staff_training_transport_annual_cost" value="{{lab_staff_training_transport_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>TOTAL</b></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+
+
+                                         <td>
+
+                                        </td>
+
+                                         <td>
+
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_diagnosis_total" id="lab_diagnosis_total" value="{{lab_diagnosis_total}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

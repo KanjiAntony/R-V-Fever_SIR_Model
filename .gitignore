@@ -1,0 +1,25 @@
+#python
+*.pyc
+*~
+__pycache__
+
+#Env
+.env
+venv/
+
+#Database
+db.sqlite3
+
+#static folder
+static/
+
+# mac
+.DS_Store
+.fseventsd
+.Spotlight-V100
+
+#windows
+Thumbs.db*
+ehthumbs*.db
+[Dd]esktop.ini
+$RECYCLE.BIN

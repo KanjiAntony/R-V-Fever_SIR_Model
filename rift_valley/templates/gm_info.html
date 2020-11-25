@@ -1,0 +1,197 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+
+                            <table >
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="checkbox" class="form-check-input" name="chk_elnino_flooding" id="chk_elnino_flooding" {{chk_elnino_flooding}}>
+                                                <label for="chk_elnino_flooding">Elnino Flooding</label>
+                                                <br/>
+                                                <label for="elnino_start_day">Start</label>
+                                                <input type="range" class="form-control mb-4" name="elnino_start_day" id="elnino_start_day" min="1" max="1000" step="1" value="{{elnino_start_day}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <br/>
+                                                <br/>
+                                                <label for="elnino_stop_day">End</label>
+                                                <input type="range" class="form-control mb-4" name="elnino_stop_day" id="elnino_stop_day" min="1" max="1000" step="1" value="{{elnino_stop_day}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="checkbox" class="form-check-input" name="chk_annual_flooding" id="chk_annual_flooding" {{chk_annual_flooding}}>
+                                                <label for="chk_annual_flooding">Annual Flooding</label>
+                                                <br/>
+                                                <label for="annual_start_day">Start</label>
+                                                <input type="range" class="form-control mb-4" name="annual_start_day" id="annual_start_day" min="1" max="1000" step="1" value="{{annual_start_day}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <br/>
+                                                <br/>
+                                                <label for="annual_stop_day">End</label>
+                                                <input type="range" class="form-control mb-4" name="annual_stop_day" id="annual_stop_day" min="1" max="1000" step="1" value="{{annual_stop_day}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <br/>
+                                                <br/>
+                                                <label for="annual_proportion">Proportion</label>
+                                                <input type="text" class="form-control input-group" name="annual_proportion" id="annual_proportion" value="{{annual_proportion}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="checkbox" class="form-check-input" name="chk_s_effect_hatching" id="chk_s_effect_hatching" {{chk_s_effect_hatching}}>
+                                                <label for="chk_s_effect_hatching">Seasonal Effect Hatching</label>
+                                                <br/>
+                                                <label for="s_effect_hatching_delay">Delay</label>
+                                                <input type="range" class="form-control mb-4" name="s_effect_hatching_delay" id="s_effect_hatching_delay" min="1" max="1000" step="1" value="{{s_effect_hatching_delay}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <br/>
+                                                <br/>
+                                                <label for="s_effect_hatching_peaks">Number of annual peaks</label>
+                                                <input type="range" class="form-control mb-4" name="s_effect_hatching_peaks" id="s_effect_hatching_peaks" min="1" max="1000" step="1" value="{{s_effect_hatching_peaks}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="checkbox" class="form-check-input" name="chk_annual_variation_climate" id="chk_annual_variation_climate" {{chk_annual_variation_climate}}>
+                                                <label for="chk_annual_variation_climate">Annual Variation Climate</label>
+                                                <br/>
+                                                <label for="annual_variation_dry_years">Dry Years</label>
+                                                <input type="range" class="form-control mb-4" name="annual_variation_dry_years" id="annual_variation_dry_years" min="1" max="1000" step="1" value="{{annual_variation_dry_years}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <br/>
+                                                <br/>
+                                                <label for="annual_variation_total_years">Total Years</label>
+                                                <input type="range" class="form-control mb-4" name="annual_variation_total_years" id="annual_variation_total_years" min="1" max="1000" step="1" value="{{annual_variation_total_years}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <br/>
+                                                <br/>
+                                                <label for="annual_variation_minimum">Minimum</label>
+                                                <input type="range" class="form-control mb-4" name="annual_variation_minimum" id="annual_variation_minimum" min="1" max="1000" step="1" value="{{annual_variation_minimum}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="checkbox" class="form-check-input" name="chk_annual_transhumance" id="chk_annual_transhumance" {{chk_annual_transhumance}}>
+                                                <label for="chk_annual_transhumance">Transhumance</label>
+                                                <br/>
+                                                <label for="trans_home_to_pasture">Homestead to pasture</label>
+                                                <input type="range" class="form-control mb-4" name="trans_home_to_pasture" id="trans_home_to_pasture" min="1" max="1000" step="1" value="{{trans_home_to_pasture}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <br/>
+                                                <br/>
+                                                <label for="trans_pasture_to_home">Pasture to homestead</label>
+                                                <input type="range" class="form-control mb-4" name="trans_pasture_to_home" id="trans_pasture_to_home" min="1" max="1000" step="1" value="{{trans_pasture_to_home}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="checkbox" class="form-check-input" name="chk_animal_susceptibility" id="chk_animal_susceptibility" {{chk_animal_susceptibility}}>
+                                                <label for="chk_animal_susceptibility">Increased susceptibility of animals</label>
+                                                <br/>
+                                                <label for="animal_susceptibility_start">Start</label>
+                                                <input type="range" class="form-control mb-4" name="animal_susceptibility_start" id="animal_susceptibility_start" min="1" max="1000" step="1" value="{{animal_susceptibility_start}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <br/>
+                                                <br/>
+                                                <label for="animal_susceptibility_stop">End</label>
+                                                <input type="range" class="form-control mb-4" name="animal_susceptibility_stop" id="animal_susceptibility_stop" min="1" max="1000" step="1" value="{{animal_susceptibility_stop}}" data-orientation="vertical">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <br/>
+                                                <br/>
+                                                <label for="animal_susceptibility_factor">Factor</label>
+                                                <input type="text" class="form-control input-group" name="animal_susceptibility_factor" id="animal_susceptibility_factor" value="{{animal_susceptibility_factor}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <label for="infected_rate_wildlife">Infected Rate Wildlife</label>
+                                                <input type="text" class="form-control input-group" name="infected_rate_wildlife" id="infected_rate_wildlife" value="{{infected_rate_wildlife}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Number of bites on alternative hosts</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control input-group" name="alt_host_bite" id="alt_host_bite" value="{{alt_host_bite}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+
+                    </form>
+
+{% endblock %}

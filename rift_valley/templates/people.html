@@ -1,0 +1,248 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                                    <tr>
+                                        <td><b>Birth Rate</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_birth_rate" id="human_birth_rate" value="{{human_birth_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Natural Mortality Rate</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_natural_mortality_rate" id="human_natural_mortality_rate" value="{{human_natural_mortality_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Average Length Incubation Period</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_avg_incubation_period" id="human_avg_incubation_period" value="{{human_avg_incubation_period}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Average Length Infective Period</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_avg_infective_period" id="human_avg_infective_period" value="{{human_avg_infective_period}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Average Length Immune Period</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_avg_immune_period" id="human_avg_immune_period" value="{{human_avg_immune_period}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Disease-specific mortality rate</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_disease_specific_mort_rate" id="human_disease_specific_mort_rate" value="{{human_disease_specific_mort_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 1 to 2</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_migration_rate_1_to_2" id="human_migration_rate_1_to_2" value="{{human_migration_rate_1_to_2}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 1 to 3</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_migration_rate_1_to_3" id="human_migration_rate_1_to_3" value="{{human_migration_rate_1_to_3}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 2 to 1</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_migration_rate_2_to_1" id="human_migration_rate_2_to_1" value="{{human_migration_rate_2_to_1}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 2 to 3</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_migration_rate_2_to_3" id="human_migration_rate_2_to_3" value="{{human_migration_rate_2_to_3}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 3 to 1</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_migration_rate_3_to_1" id="human_migration_rate_3_to_1" value="{{human_migration_rate_3_to_1}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 3 to 2</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_migration_rate_3_to_2" id="human_migration_rate_3_to_2" value="{{human_migration_rate_3_to_2}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Infection transfer rate from human to Vector A</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_infection_rate_to_vector_A" id="human_infection_rate_to_vector_A" value="{{human_infection_rate_to_vector_A}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Infection transfer rate from human to Vector B</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_infection_rate_to_vector_B" id="human_infection_rate_to_vector_B" value="{{human_infection_rate_to_vector_B}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Infection transfer rate from human to Vector C</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_infection_rate_to_vector_C" id="human_infection_rate_to_vector_C" value="{{human_infection_rate_to_vector_C}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Infection transfer rate from human to Vector D</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_infection_rate_to_vector_D" id="human_infection_rate_to_vector_D" value="{{human_infection_rate_to_vector_D}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Contact rate from human to animal in zone 1</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_contact_rate_to_animal_zone_1" id="human_contact_rate_to_animal_zone_1" value="{{human_contact_rate_to_animal_zone_1}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Contact rate from human to animal in zone 2</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_contact_rate_to_animal_zone_2" id="human_contact_rate_to_animal_zone_2" value="{{human_contact_rate_to_animal_zone_2}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Contact rate from human to animal in zone 3</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_contact_rate_to_animal_zone_3" id="human_contact_rate_to_animal_zone_3" value="{{human_contact_rate_to_animal_zone_3}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Maximum supported biting rate zone 1</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_max_biting_rate_zone_1" id="human_max_biting_rate_zone_1" value="{{human_max_biting_rate_zone_1}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Maximum supported biting rate zone 2</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_max_biting_rate_zone_2" id="human_max_biting_rate_zone_2" value="{{human_max_biting_rate_zone_2}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Maximum supported biting rate zone 3</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="human_max_biting_rate_zone_3" id="human_max_biting_rate_zone_3" value="{{human_max_biting_rate_zone_3}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

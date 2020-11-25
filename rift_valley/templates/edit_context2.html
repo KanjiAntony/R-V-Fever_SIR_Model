@@ -1,0 +1,357 @@
+    for total_annual_cost in rvf_total_annual_cost_collection.find({}, {"_id": 0}):
+         total_annual_cost_context = total_annual_cost
+
+    for capital in rvf_capital_cost_collection.find({}, {"_id": 0}):
+         capital_cost_context = capital
+
+'ZDU_setup_costs_year': capital_cost_context['setup_capital_total_cost'],
+    'with_health_programme_benefits_year_0': context['with_health_programme_benefits_year_0'],
+    'with_health_programme_benefits_year_1': context['with_health_programme_benefits_year_1'],
+    'with_health_programme_benefits_year_2': context['with_health_programme_benefits_year_2'],
+    'with_health_programme_benefits_year_3': context['with_health_programme_benefits_year_3'],
+    'with_health_programme_benefits_year_4': context['with_health_programme_benefits_year_4'],
+    'with_health_programme_benefits_year_5': context['with_health_programme_benefits_year_5'],
+    'with_health_programme_benefits_year_6': context['with_health_programme_benefits_year_6'],
+    'with_health_programme_benefits_year_7': context['with_health_programme_benefits_year_7'],
+    'with_health_programme_benefits_year_8': context['with_health_programme_benefits_year_8'],
+    'with_health_programme_benefits_year_9': context['with_health_programme_benefits_year_9'],
+    'with_health_programme_benefits_year_10': context['with_health_programme_benefits_year_10'],
+    'with_health_programme_benefits_year_11': context['with_health_programme_benefits_year_11'],
+    'with_health_programme_benefits_year_12': context['with_health_programme_benefits_year_12'],
+    'with_health_programme_benefits_year_13': context['with_health_programme_benefits_year_13'],
+    'with_health_programme_benefits_year_14': context['with_health_programme_benefits_year_14'],
+    'with_health_programme_benefits_year_15': context['with_health_programme_benefits_year_15'],
+    'with_health_programme_benefits_year_16': context['with_health_programme_benefits_year_16'],
+    'with_health_programme_benefits_year_17': context['with_health_programme_benefits_year_17'],
+    'with_health_programme_benefits_year_18': context['with_health_programme_benefits_year_18'],
+    'with_health_programme_benefits_year_19': context['with_health_programme_benefits_year_19'],
+    'with_health_programme_benefits_year_20': context['with_health_programme_benefits_year_20'],
+
+    'without_health_programme_benefits_year_0': context['without_health_programme_benefits_year_0'],
+    'without_health_programme_benefits_year_1': context['without_health_programme_benefits_year_1'],
+    'without_health_programme_benefits_year_2': context['without_health_programme_benefits_year_2'],
+    'without_health_programme_benefits_year_3': context['without_health_programme_benefits_year_3'],
+    'without_health_programme_benefits_year_4': context['without_health_programme_benefits_year_4'],
+    'without_health_programme_benefits_year_5': context['without_health_programme_benefits_year_5'],
+    'without_health_programme_benefits_year_6': context['without_health_programme_benefits_year_6'],
+    'without_health_programme_benefits_year_7': context['without_health_programme_benefits_year_7'],
+    'without_health_programme_benefits_year_8': context['without_health_programme_benefits_year_8'],
+    'without_health_programme_benefits_year_9': context['without_health_programme_benefits_year_9'],
+    'without_health_programme_benefits_year_10': context['without_health_programme_benefits_year_10'],
+    'without_health_programme_benefits_year_11': context['without_health_programme_benefits_year_11'],
+    'without_health_programme_benefits_year_12': context['without_health_programme_benefits_year_12'],
+    'without_health_programme_benefits_year_13': context['without_health_programme_benefits_year_13'],
+    'without_health_programme_benefits_year_14': context['without_health_programme_benefits_year_14'],
+    'without_health_programme_benefits_year_15': context['without_health_programme_benefits_year_15'],
+    'without_health_programme_benefits_year_16': context['without_health_programme_benefits_year_16'],
+    'without_health_programme_benefits_year_17': context['without_health_programme_benefits_year_17'],
+    'without_health_programme_benefits_year_18': context['without_health_programme_benefits_year_18'],
+    'without_health_programme_benefits_year_19': context['without_health_programme_benefits_year_19'],
+    'without_health_programme_benefits_year_20': context['without_health_programme_benefits_year_20'],
+
+    'incremental_benefits_year_0': context['incremental_benefits_year_0'],
+    'incremental_benefits_year_1': context['incremental_benefits_year_1'],
+    'incremental_benefits_year_2': context['incremental_benefits_year_2'],
+    'incremental_benefits_year_3': context['incremental_benefits_year_3'],
+    'incremental_benefits_year_4': context['incremental_benefits_year_4'],
+    'incremental_benefits_year_5': context['incremental_benefits_year_5'],
+    'incremental_benefits_year_6': context['incremental_benefits_year_6'],
+    'incremental_benefits_year_7': context['incremental_benefits_year_7'],
+    'incremental_benefits_year_8': context['incremental_benefits_year_8'],
+    'incremental_benefits_year_9': context['incremental_benefits_year_9'],
+    'incremental_benefits_year_10': context['incremental_benefits_year_10'],
+    'incremental_benefits_year_11': context['incremental_benefits_year_11'],
+    'incremental_benefits_year_12': context['incremental_benefits_year_12'],
+    'incremental_benefits_year_13': context['incremental_benefits_year_13'],
+    'incremental_benefits_year_14': context['incremental_benefits_year_14'],
+    'incremental_benefits_year_15': context['incremental_benefits_year_15'],
+    'incremental_benefits_year_16': context['incremental_benefits_year_16'],
+    'incremental_benefits_year_17': context['incremental_benefits_year_17'],
+    'incremental_benefits_year_18': context['incremental_benefits_year_18'],
+    'incremental_benefits_year_19': context['incremental_benefits_year_19'],
+    'incremental_benefits_year_20': context['incremental_benefits_year_20'],
+
+'discounted_benefits_year_0': (1.0725**int(-0))*float(context['incremental_benefits_year_0']),
+        'discounted_benefits_year_1': (1.0725**int(-1))*float(context['incremental_benefits_year_1']),
+        'discounted_benefits_year_2': (1.0725**int(-2))*float(context['incremental_benefits_year_2']),
+        'discounted_benefits_year_3': (1.0725**int(-3))*float(context['incremental_benefits_year_3']),
+        'discounted_benefits_year_4': (1.0725**int(-4))*float(context['incremental_benefits_year_4']),
+        'discounted_benefits_year_5': (1.0725**int(-5))*float(context['incremental_benefits_year_5']),
+        'discounted_benefits_year_6': (1.0725**int(-6))*float(context['incremental_benefits_year_6']),
+        'discounted_benefits_year_7': (1.0725**int(-7))*float(context['incremental_benefits_year_7']),
+        'discounted_benefits_year_8': (1.0725**int(-8))*float(context['incremental_benefits_year_8']),
+        'discounted_benefits_year_9': (1.0725**int(-9))*float(context['incremental_benefits_year_9']),
+        'discounted_benefits_year_10': (1.0725**int(-10))*float(context['incremental_benefits_year_10']),
+        'discounted_benefits_year_11': (1.0725**int(-11))*float(context['incremental_benefits_year_11']),
+        'discounted_benefits_year_12': (1.0725**int(-12))*float(context['incremental_benefits_year_12']),
+        'discounted_benefits_year_13': (1.0725**int(-13))*float(context['incremental_benefits_year_13']),
+        'discounted_benefits_year_14': (1.0725**int(-14))*float(context['incremental_benefits_year_14']),
+        'discounted_benefits_year_15': (1.0725**int(-15))*float(context['incremental_benefits_year_15']),
+        'discounted_benefits_year_16': (1.0725**int(-16))*float(context['incremental_benefits_year_16']),
+        'discounted_benefits_year_17': (1.0725**int(-17))*float(context['incremental_benefits_year_17']),
+        'discounted_benefits_year_18': (1.0725**int(-18))*float(context['incremental_benefits_year_18']),
+        'discounted_benefits_year_19': (1.0725**int(-19))*float(context['incremental_benefits_year_19']),
+        'discounted_benefits_year_20': (1.0725**int(-20))*float(context['incremental_benefits_year_20']),
+
+        'annual_programme_costs_year_0': context['annual_programme_costs_year_0'],
+        'annual_programme_costs_year_1': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_2': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_3': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_4': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_5': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_6': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_7': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_8': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_9': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_10': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_11': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_12': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_13': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_14': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_15': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_16': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_17': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_18': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_19': total_annual_cost_context['total_cost_ksh'],
+        'annual_programme_costs_year_20': total_annual_cost_context['total_cost_ksh'],
+
+    'discounted_costs_year_0': (1.0725**int(-0))*float(capital_cost_context['setup_capital_total_cost']),
+        'discounted_costs_year_1': (1.0725**int(-1))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_2': (1.0725**int(-2))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_3': (1.0725**int(-3))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_4': (1.0725**int(-4))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_5': (1.0725**int(-5))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_6': (1.0725**int(-6))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_7': (1.0725**int(-7))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_8': (1.0725**int(-8))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_9': (1.0725**int(-9))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_10': (1.0725**int(-10))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_11': (1.0725**int(-11))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_12': (1.0725**int(-12))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_13': (1.0725**int(-13))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_14': (1.0725**int(-14))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_15': (1.0725**int(-15))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_16': (1.0725**int(-16))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_17': (1.0725**int(-17))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_18': (1.0725**int(-18))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_19': (1.0725**int(-19))*float(total_annual_cost_context['total_cost_ksh']),
+        'discounted_costs_year_20': (1.0725**int(-20))*float(total_annual_cost_context['total_cost_ksh']),
+
+    'discounted_net_benefits_year_0': ((1.0725**int(-0))*float(context['incremental_benefits_year_0']))-((1.0725**int(-0))*float(capital_cost_context['setup_capital_total_cost'])),
+        'discounted_net_benefits_year_1': ((1.0725**int(-1))*float(context['incremental_benefits_year_1']))-((1.0725**int(-1))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_2': ((1.0725**int(-2))*float(context['incremental_benefits_year_2']))-((1.0725**int(-2))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_3': ((1.0725**int(-3))*float(context['incremental_benefits_year_3']))-((1.0725**int(-3))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_4': ((1.0725**int(-4))*float(context['incremental_benefits_year_4']))-((1.0725**int(-4))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_5': ((1.0725**int(-5))*float(context['incremental_benefits_year_5']))-((1.0725**int(-5))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_6': ((1.0725**int(-6))*float(context['incremental_benefits_year_6']))-((1.0725**int(-6))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_7': ((1.0725**int(-7))*float(context['incremental_benefits_year_7']))-((1.0725**int(-7))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_8': ((1.0725**int(-8))*float(context['incremental_benefits_year_8']))-((1.0725**int(-8))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_9': ((1.0725**int(-9))*float(context['incremental_benefits_year_9']))-((1.0725**int(-9))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_10': ((1.0725**int(-10))*float(context['incremental_benefits_year_10']))-((1.0725**int(-10))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_11': ((1.0725**int(-11))*float(context['incremental_benefits_year_11']))-((1.0725**int(-11))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_12': ((1.0725**int(-12))*float(context['incremental_benefits_year_12']))-((1.0725**int(-12))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_13': ((1.0725**int(-13))*float(context['incremental_benefits_year_13']))-((1.0725**int(-13))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_14': ((1.0725**int(-14))*float(context['incremental_benefits_year_14']))-((1.0725**int(-14))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_15': ((1.0725**int(-15))*float(context['incremental_benefits_year_15']))-((1.0725**int(-15))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_16': ((1.0725**int(-16))*float(context['incremental_benefits_year_16']))-((1.0725**int(-16))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_17': ((1.0725**int(-17))*float(context['incremental_benefits_year_17']))-((1.0725**int(-17))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_18': ((1.0725**int(-18))*float(context['incremental_benefits_year_18']))-((1.0725**int(-18))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_19': ((1.0725**int(-19))*float(context['incremental_benefits_year_19']))-((1.0725**int(-19))*float(total_annual_cost_context['total_cost_ksh'])),
+        'discounted_net_benefits_year_20': ((1.0725**int(-20))*float(context['incremental_benefits_year_20']))-((1.0725**int(-20))*float(total_annual_cost_context['total_cost_ksh'])),
+
+    'NPV_year': (((1.0725**int(-0))*float(context['incremental_benefits_year_0']))-((1.0725**int(-0))*float(capital_cost_context['setup_capital_total_cost'])))+
+                (((1.0725**int(-1))*float(context['incremental_benefits_year_1']))-((1.0725**int(-1))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-2))*float(context['incremental_benefits_year_2']))-((1.0725**int(-2))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-3))*float(context['incremental_benefits_year_3']))-((1.0725**int(-3))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-4))*float(context['incremental_benefits_year_4']))-((1.0725**int(-4))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-5))*float(context['incremental_benefits_year_5']))-((1.0725**int(-5))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-6))*float(context['incremental_benefits_year_6']))-((1.0725**int(-6))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-7))*float(context['incremental_benefits_year_7']))-((1.0725**int(-7))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-8))*float(context['incremental_benefits_year_8']))-((1.0725**int(-8))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-9))*float(context['incremental_benefits_year_9']))-((1.0725**int(-9))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-10))*float(context['incremental_benefits_year_10']))-((1.0725**int(-10))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-11))*float(context['incremental_benefits_year_11']))-((1.0725**int(-11))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-12))*float(context['incremental_benefits_year_12']))-((1.0725**int(-12))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-13))*float(context['incremental_benefits_year_13']))-((1.0725**int(-13))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-14))*float(context['incremental_benefits_year_14']))-((1.0725**int(-14))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-15))*float(context['incremental_benefits_year_15']))-((1.0725**int(-15))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-16))*float(context['incremental_benefits_year_16']))-((1.0725**int(-16))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-17))*float(context['incremental_benefits_year_17']))-((1.0725**int(-17))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-18))*float(context['incremental_benefits_year_18']))-((1.0725**int(-18))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-19))*float(context['incremental_benefits_year_19']))-((1.0725**int(-19))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-20))*float(context['incremental_benefits_year_20']))-((1.0725**int(-20))*float(total_annual_cost_context['total_cost_ksh']))),
+
+    'BCR_year': (((1.0725**int(-0))*float(context['incremental_benefits_year_0']))+
+    ((1.0725**int(-1))*float(context['incremental_benefits_year_1']))+
+    ((1.0725**int(-2))*float(context['incremental_benefits_year_2']))+
+    ((1.0725**int(-3))*float(context['incremental_benefits_year_3']))+
+    ((1.0725**int(-4))*float(context['incremental_benefits_year_4']))+
+    ((1.0725**int(-5))*float(context['incremental_benefits_year_5']))+
+    ((1.0725**int(-6))*float(context['incremental_benefits_year_6']))+
+    ((1.0725**int(-7))*float(context['incremental_benefits_year_7']))+
+    ((1.0725**int(-8))*float(context['incremental_benefits_year_8']))+
+    ((1.0725**int(-9))*float(context['incremental_benefits_year_9']))+
+    ((1.0725**int(-10))*float(context['incremental_benefits_year_10']))+
+    ((1.0725**int(-11))*float(context['incremental_benefits_year_11']))+
+    ((1.0725**int(-12))*float(context['incremental_benefits_year_12']))+
+    ((1.0725**int(-13))*float(context['incremental_benefits_year_13']))+
+    ((1.0725**int(-14))*float(context['incremental_benefits_year_14']))+
+    ((1.0725**int(-15))*float(context['incremental_benefits_year_15']))+
+    ((1.0725**int(-16))*float(context['incremental_benefits_year_16']))+
+    ((1.0725**int(-17))*float(context['incremental_benefits_year_17']))+
+    ((1.0725**int(-18))*float(context['incremental_benefits_year_18']))+
+    ((1.0725**int(-19))*float(context['incremental_benefits_year_19']))+
+    ((1.0725**int(-20))*float(context['incremental_benefits_year_20']))
+    ) / ( ((1.0725**int(-0))*float(capital_cost_context['setup_capital_total_cost']))+
+        ((1.0725**int(-1))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-2))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-3))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-4))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-5))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-6))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-7))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-8))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-9))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-10))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-11))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-12))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-13))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-14))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-15))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-16))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-17))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-18))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-19))*float(total_annual_cost_context['total_cost_ksh']))+
+        ((1.0725**int(-20))*float(total_annual_cost_context['total_cost_ksh']))
+        ),
+
+    'increase_in_annual_programme_costs_year_0': context['annual_programme_costs_year_0'],
+    'increase_in_annual_programme_costs_year_1': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_2': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_3': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_4': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_5': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_6': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_7': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_8': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_9': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_10': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_11': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_12': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_13': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_14': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_15': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_16': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_17': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_18': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_19': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+    'increase_in_annual_programme_costs_year_20': 1.2*float(total_annual_cost_context['total_cost_ksh']),
+
+    'extra_discounted_costs_year_0': (1.0725**int(-0))*float(capital_cost_context['setup_capital_total_cost']),
+        'extra_discounted_costs_year_1': (1.0725**int(-1))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_2': (1.0725**int(-2))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_3': (1.0725**int(-3))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_4': (1.0725**int(-4))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_5': (1.0725**int(-5))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_6': (1.0725**int(-6))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_7': (1.0725**int(-7))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_8': (1.0725**int(-8))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_9': (1.0725**int(-9))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_10': (1.0725**int(-10))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_11': (1.0725**int(-11))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_12': (1.0725**int(-12))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_13': (1.0725**int(-13))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_14': (1.0725**int(-14))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_15': (1.0725**int(-15))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_16': (1.0725**int(-16))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_17': (1.0725**int(-17))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_18': (1.0725**int(-18))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_19': (1.0725**int(-19))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+        'extra_discounted_costs_year_20': (1.0725**int(-20))*1.2*float(total_annual_cost_context['total_cost_ksh']),
+
+    'extra_NPV_year': ((((1.0725**int(-0))*float(context['incremental_benefits_year_0']))-((1.0725**int(-0))*float(capital_cost_context['setup_capital_total_cost'])))+
+                (((1.0725**int(-1))*float(context['incremental_benefits_year_1']))-((1.0725**int(-1))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-2))*float(context['incremental_benefits_year_2']))-((1.0725**int(-2))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-3))*float(context['incremental_benefits_year_3']))-((1.0725**int(-3))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-4))*float(context['incremental_benefits_year_4']))-((1.0725**int(-4))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-5))*float(context['incremental_benefits_year_5']))-((1.0725**int(-5))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-6))*float(context['incremental_benefits_year_6']))-((1.0725**int(-6))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-7))*float(context['incremental_benefits_year_7']))-((1.0725**int(-7))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-8))*float(context['incremental_benefits_year_8']))-((1.0725**int(-8))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-9))*float(context['incremental_benefits_year_9']))-((1.0725**int(-9))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-10))*float(context['incremental_benefits_year_10']))-((1.0725**int(-10))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-11))*float(context['incremental_benefits_year_11']))-((1.0725**int(-11))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-12))*float(context['incremental_benefits_year_12']))-((1.0725**int(-12))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-13))*float(context['incremental_benefits_year_13']))-((1.0725**int(-13))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-14))*float(context['incremental_benefits_year_14']))-((1.0725**int(-14))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-15))*float(context['incremental_benefits_year_15']))-((1.0725**int(-15))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-16))*float(context['incremental_benefits_year_16']))-((1.0725**int(-16))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-17))*float(context['incremental_benefits_year_17']))-((1.0725**int(-17))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-18))*float(context['incremental_benefits_year_18']))-((1.0725**int(-18))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-19))*float(context['incremental_benefits_year_19']))-((1.0725**int(-19))*float(total_annual_cost_context['total_cost_ksh'])))+
+                (((1.0725**int(-20))*float(context['incremental_benefits_year_20']))-((1.0725**int(-20))*float(total_annual_cost_context['total_cost_ksh'])))) - (((1.0725**int(-0))*float(capital_cost_context['setup_capital_total_cost']))+
+                ((1.0725**int(-1))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-2))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-3))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-4))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-5))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-6))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-7))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-8))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-9))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-10))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-11))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-12))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-13))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-14))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-15))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-16))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-17))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-18))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-19))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                ((1.0725**int(-20))*1.2*float(total_annual_cost_context['total_cost_ksh']))
+    ),
+
+    'extra_BCR_year': (((1.0725**int(-0))*float(context['incremental_benefits_year_0']))+
+                        ((1.0725**int(-1))*float(context['incremental_benefits_year_1']))+
+                        ((1.0725**int(-2))*float(context['incremental_benefits_year_2']))+
+                        ((1.0725**int(-3))*float(context['incremental_benefits_year_3']))+
+                        ((1.0725**int(-4))*float(context['incremental_benefits_year_4']))+
+                        ((1.0725**int(-5))*float(context['incremental_benefits_year_5']))+
+                        ((1.0725**int(-6))*float(context['incremental_benefits_year_6']))+
+                        ((1.0725**int(-7))*float(context['incremental_benefits_year_7']))+
+                        ((1.0725**int(-8))*float(context['incremental_benefits_year_8']))+
+                        ((1.0725**int(-9))*float(context['incremental_benefits_year_9']))+
+                        ((1.0725**int(-10))*float(context['incremental_benefits_year_10']))+
+                        ((1.0725**int(-11))*float(context['incremental_benefits_year_11']))+
+                        ((1.0725**int(-12))*float(context['incremental_benefits_year_12']))+
+                        ((1.0725**int(-13))*float(context['incremental_benefits_year_13']))+
+                        ((1.0725**int(-14))*float(context['incremental_benefits_year_14']))+
+                        ((1.0725**int(-15))*float(context['incremental_benefits_year_15']))+
+                        ((1.0725**int(-16))*float(context['incremental_benefits_year_16']))+
+                        ((1.0725**int(-17))*float(context['incremental_benefits_year_17']))+
+                        ((1.0725**int(-18))*float(context['incremental_benefits_year_18']))+
+                        ((1.0725**int(-19))*float(context['incremental_benefits_year_19']))+
+                        ((1.0725**int(-20))*float(context['incremental_benefits_year_20']))
+                        ) / (((1.0725**int(-0))*float(capital_cost_context['setup_capital_total_cost']))+
+                        ((1.0725**int(-1))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-2))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-3))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-4))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-5))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-6))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-7))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-8))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-9))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-10))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-11))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-12))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-13))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-14))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-15))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-16))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-17))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-18))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-19))*1.2*float(total_annual_cost_context['total_cost_ksh']))+
+                        ((1.0725**int(-20))*1.2*float(total_annual_cost_context['total_cost_ksh']))
+                        ),

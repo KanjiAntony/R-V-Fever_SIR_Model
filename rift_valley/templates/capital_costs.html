@@ -1,0 +1,859 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                                    <h2>Rapid Surveillance & Response Unit</h2>
+
+                                    <tr>
+                                        <td><b>Assumptions:</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <textarea class="form-control mb-4" name="capital_costs_assumptions" id="capital_costs_assumptions" rows="10" cols="50">{{capital_costs_assumptions}}</textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>FIXED ITEMS</b></td>
+                                        <td><b>Number required</b></td>
+                                        <td><b>Unit REPLACEMENT COST</b></td>
+                                        <td><b>Setup costs</b></td>
+                                        <td><b>SALVAGE VALUE/unit</b></td>
+                                        <td><b>PRODUCTIVE LIFESPAN YRS</b></td>
+                                        <td><b>Annual cost </b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>1. Land Cruisers</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><i>For surveillance/vaccination teams</i></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="surveillance_land_cruisers_number" id="surveillance_land_cruisers_number" value="{{surveillance_land_cruisers_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="surveillance_land_cruisers_replacement_unit_cost" id="surveillance_land_cruisers_replacement_unit_cost" value="{{surveillance_land_cruisers_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="surveillance_land_cruisers_setup_costs" id="surveillance_land_cruisers_setup_costs" value="{{surveillance_land_cruisers_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="surveillance_land_cruisers_salvage_value" id="surveillance_land_cruisers_salvage_value" value="{{surveillance_land_cruisers_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="surveillance_land_cruisers_productive_lifespan" id="surveillance_land_cruisers_productive_lifespan" value="{{surveillance_land_cruisers_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="surveillance_land_cruisers_annual_cost" id="surveillance_land_cruisers_annual_cost" value="{{surveillance_land_cruisers_annual_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><i>For supervisor</i></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="supervisor_land_cruisers_number" id="supervisor_land_cruisers_number" value="{{supervisor_land_cruisers_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="supervisor_land_cruisers_replacement_unit_cost" id="supervisor_land_cruisers_replacement_unit_cost" value="{{supervisor_land_cruisers_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="supervisor_land_cruisers_setup_costs" id="supervisor_land_cruisers_setup_costs" value="{{supervisor_land_cruisers_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="supervisor_land_cruisers_salvage_value" id="supervisor_land_cruisers_salvage_value" value="{{supervisor_land_cruisers_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="supervisor_land_cruisers_productive_lifespan" id="supervisor_land_cruisers_productive_lifespan" value="{{supervisor_land_cruisers_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="supervisor_land_cruisers_annual_cost" id="supervisor_land_cruisers_annual_cost" value="{{supervisor_land_cruisers_annual_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>2. Automatic syringes</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><i>10 ml</i></td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="10ml_auto_syringes_number" id="10ml_auto_syringes_number" value="{{10ml_auto_syringes_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="10ml_auto_syringes_replacement_unit_cost" id="10ml_auto_syringes_replacement_unit_cost" value="{{10ml_auto_syringes_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="10ml_auto_syringes_setup_costs" id="10ml_auto_syringes_setup_costs" value="{{10ml_auto_syringes_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="10ml_auto_syringes_salvage_value" id="10ml_auto_syringes_salvage_value" value="{{10ml_auto_syringes_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="10ml_auto_syringes_productive_lifespan" id="10ml_auto_syringes_productive_lifespan" value="{{10ml_auto_syringes_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="10ml_auto_syringes_annual_cost" id="10ml_auto_syringes_annual_cost" value="{{10ml_auto_syringes_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><i>30 ml</i></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="30ml_auto_syringes_number" id="30ml_auto_syringes_number" value="{{30ml_auto_syringes_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="30ml_auto_syringes_replacement_unit_cost" id="30ml_auto_syringes_replacement_unit_cost" value="{{30ml_auto_syringes_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="30ml_auto_syringes_setup_costs" id="30ml_auto_syringes_setup_costs" value="{{30ml_auto_syringes_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="30ml_auto_syringes_salvage_value" id="30ml_auto_syringes_salvage_value" value="{{30ml_auto_syringes_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="30ml_auto_syringes_productive_lifespan" id="30ml_auto_syringes_productive_lifespan" value="{{30ml_auto_syringes_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="30ml_auto_syringes_annual_cost" id="30ml_auto_syringes_annual_cost" value="{{30ml_auto_syringes_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><i>50 ml</i></td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="50ml_auto_syringes_number" id="50ml_auto_syringes_number" value="{{50ml_auto_syringes_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="50ml_auto_syringes_replacement_unit_cost" id="50ml_auto_syringes_replacement_unit_cost" value="{{50ml_auto_syringes_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="50ml_auto_syringes_setup_costs" id="50ml_auto_syringes_setup_costs" value="{{50ml_auto_syringes_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="50ml_auto_syringes_salvage_value" id="50ml_auto_syringes_salvage_value" value="{{50ml_auto_syringes_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="50ml_auto_syringes_productive_lifespan" id="50ml_auto_syringes_productive_lifespan" value="{{50ml_auto_syringes_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="50ml_auto_syringes_annual_cost" id="50ml_auto_syringes_annual_cost" value="{{50ml_auto_syringes_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3. Camping equipment</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="camping_equipment_number" id="camping_equipment_number" value="{{camping_equipment_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="camping_equipment_replacement_unit_cost" id="camping_equipment_replacement_unit_cost" value="{{camping_equipment_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="camping_equipment_setup_costs" id="camping_equipment_setup_costs" value="{{camping_equipment_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="camping_equipment_salvage_value" id="camping_equipment_salvage_value" value="{{camping_equipment_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="camping_equipment_productive_lifespan" id="camping_equipment_productive_lifespan" value="{{camping_equipment_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="camping_equipment_annual_cost" id="camping_equipment_annual_cost" value="{{camping_equipment_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4. Refrigerator</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerator_number" id="refrigerator_number" value="{{refrigerator_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerator_replacement_unit_cost" id="refrigerator_replacement_unit_cost" value="{{refrigerator_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerator_setup_costs" id="refrigerator_setup_costs" value="{{refrigerator_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerator_salvage_value" id="refrigerator_salvage_value" value="{{refrigerator_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerator_productive_lifespan" id="refrigerator_productive_lifespan" value="{{refrigerator_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="refrigerator_annual_cost" id="refrigerator_annual_cost" value="{{refrigerator_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>5. Freezers</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_number" id="freezers_number" value="{{freezers_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_replacement_unit_cost" id="freezers_replacement_unit_cost" value="{{freezers_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_setup_costs" id="freezers_setup_costs" value="{{freezers_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_salvage_value" id="freezers_salvage_value" value="{{freezers_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_productive_lifespan" id="freezers_productive_lifespan" value="{{freezers_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="freezers_annual_cost" id="freezers_annual_cost" value="{{freezers_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>6. Gas cylinder/regulator</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="gas_cylinder_number" id="gas_cylinder_number" value="{{gas_cylinder_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="gas_cylinder_replacement_unit_cost" id="gas_cylinder_replacement_unit_cost" value="{{gas_cylinder_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="gas_cylinder_setup_costs" id="gas_cylinder_setup_costs" value="{{gas_cylinder_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="gas_cylinder_salvage_value" id="gas_cylinder_salvage_value" value="{{gas_cylinder_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="gas_cylinder_productive_lifespan" id="gas_cylinder_productive_lifespan" value="{{gas_cylinder_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="gas_cylinder_annual_cost" id="gas_cylinder_annual_cost" value="{{gas_cylinder_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>7. Crushes</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="crushes_number" id="crushes_number" value="{{crushes_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="crushes_replacement_unit_cost" id="crushes_replacement_unit_cost" value="{{crushes_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="crushes_setup_costs" id="crushes_setup_costs" value="{{crushes_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="crushes_salvage_value" id="crushes_salvage_value" value="{{crushes_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="crushes_productive_lifespan" id="crushes_productive_lifespan" value="{{crushes_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="crushes_annual_cost" id="crushes_annual_cost" value="{{crushes_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>8. Tally counters</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tally_counters_number" id="tally_counters_number" value="{{tally_counters_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tally_counters_replacement_unit_cost" id="tally_counters_replacement_unit_cost" value="{{tally_counters_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tally_counters_setup_costs" id="tally_counters_setup_costs" value="{{tally_counters_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tally_counters_salvage_value" id="tally_counters_salvage_value" value="{{tally_counters_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tally_counters_productive_lifespan" id="tally_counters_productive_lifespan" value="{{tally_counters_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tally_counters_annual_cost" id="tally_counters_annual_cost" value="{{tally_counters_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>9. Generators</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generators_number" id="generators_number" value="{{generators_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generators_replacement_unit_cost" id="generators_replacement_unit_cost" value="{{generators_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generators_setup_costs" id="generators_setup_costs" value="{{generators_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generators_salvage_value" id="generators_salvage_value" value="{{generators_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generators_productive_lifespan" id="generators_productive_lifespan" value="{{generators_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="generators_annual_cost" id="generators_annual_cost" value="{{generators_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>10. Ice maker</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ice_maker_number" id="ice_maker_number" value="{{ice_maker_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ice_maker_replacement_unit_cost" id="ice_maker_replacement_unit_cost" value="{{ice_maker_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ice_maker_setup_costs" id="ice_maker_setup_costs" value="{{ice_maker_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ice_maker_salvage_value" id="ice_maker_salvage_value" value="{{ice_maker_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ice_maker_productive_lifespan" id="ice_maker_productive_lifespan" value="{{ice_maker_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ice_maker_annual_cost" id="ice_maker_annual_cost" value="{{ice_maker_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>11. Ear notchers</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ear_notchers_number" id="ear_notchers_number" value="{{ear_notchers_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ear_notchers_replacement_unit_cost" id="ear_notchers_replacement_unit_cost" value="{{ear_notchers_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ear_notchers_setup_costs" id="ear_notchers_setup_costs" value="{{ear_notchers_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ear_notchers_salvage_value" id="ear_notchers_salvage_value" value="{{ear_notchers_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ear_notchers_productive_lifespan" id="ear_notchers_productive_lifespan" value="{{ear_notchers_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ear_notchers_annual_cost" id="ear_notchers_annual_cost" value="{{ear_notchers_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>12. Buildings</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><i>Vaccine production unit</i></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vaccine_production_unit_number" id="vaccine_production_unit_number" value="{{vaccine_production_unit_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vaccine_production_unit_replacement_unit_cost" id="vaccine_production_unit_replacement_unit_cost" value="{{vaccine_production_unit_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vaccine_production_unit_setup_costs" id="vaccine_production_unit_setup_costs" value="{{vaccine_production_unit_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vaccine_production_unit_salvage_value" id="vaccine_production_unit_salvage_value" value="{{vaccine_production_unit_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vaccine_production_unit_productive_lifespan" id="vaccine_production_unit_productive_lifespan" value="{{vaccine_production_unit_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vaccine_production_unit_annual_cost" id="vaccine_production_unit_annual_cost" value="{{vaccine_production_unit_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><i>Diagnostic labs</i></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="diagnostic_labs_number" id="diagnostic_labs_number" value="{{diagnostic_labs_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="diagnostic_labs_replacement_unit_cost" id="diagnostic_labs_replacement_unit_cost" value="{{diagnostic_labs_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="diagnostic_labs_setup_costs" id="diagnostic_labs_setup_costs" value="{{diagnostic_labs_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="diagnostic_labs_salvage_value" id="diagnostic_labs_salvage_value" value="{{diagnostic_labs_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="diagnostic_labs_productive_lifespan" id="diagnostic_labs_productive_lifespan" value="{{diagnostic_labs_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="diagnostic_labs_annual_cost" id="diagnostic_labs_annual_cost" value="{{diagnostic_labs_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><i>Offices</i></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="offices_number" id="offices_number" value="{{offices_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="offices_replacement_unit_cost" id="offices_replacement_unit_cost" value="{{offices_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="offices_setup_costs" id="offices_setup_costs" value="{{offices_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="offices_salvage_value" id="offices_salvage_value" value="{{offices_salvage_value}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="offices_productive_lifespan" id="offices_productive_lifespan" value="{{offices_productive_lifespan}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="offices_annual_cost" id="offices_annual_cost" value="{{offices_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>VARIABLE COSTS</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>1. Repair of equipment</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="equipment_repair_number" id="equipment_repair_number" value="{{equipment_repair_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="equipment_repair_replacement_unit_cost" id="equipment_repair_replacement_unit_cost" value="{{equipment_repair_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="equipment_repair_setup_costs" id="equipment_repair_setup_costs" value="{{equipment_repair_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="equipment_repair_annual_cost" id="equipment_repair_annual_cost" value="{{equipment_repair_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2. Vehicle repairs</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vehicle_repair_number" id="vehicle_repair_number" value="{{vehicle_repair_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vehicle_repair_replacement_unit_cost" id="vehicle_repair_replacement_unit_cost" value="{{vehicle_repair_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vehicle_repair_setup_costs" id="vehicle_repair_setup_costs" value="{{vehicle_repair_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vehicle_repair_annual_cost" id="vehicle_repair_annual_cost" value="{{vehicle_repair_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3. Crush survey & repair</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="crush_survey_repair_number" id="crush_survey_repair_number" value="{{crush_survey_repair_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="crush_survey_repair_replacement_unit_cost" id="crush_survey_repair_replacement_unit_cost" value="{{crush_survey_repair_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="crush_survey_repair_setup_costs" id="crush_survey_repair_setup_costs" value="{{crush_survey_repair_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="crush_survey_repair_annual_cost" id="crush_survey_repair_annual_cost" value="{{crush_survey_repair_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4. Gas/electricity</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="electricity_number" id="electricity_number" value="{{electricity_number}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="electricity_replacement_unit_cost" id="electricity_replacement_unit_cost" value="{{electricity_replacement_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="electricity_setup_costs" id="electricity_setup_costs" value="{{electricity_setup_costs}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="electricity_annual_cost" id="electricity_annual_cost" value="{{electricity_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>TOTAL</b></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="setup_capital_total_cost" id="setup_capital_total_cost" value="{{setup_capital_total_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_capital_total_cost" id="annual_capital_total_cost" value="{{annual_capital_total_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

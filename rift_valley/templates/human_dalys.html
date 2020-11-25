@@ -1,0 +1,1188 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                                    <tr>
+                                        <td><b>County</b></td>
+                                        <td><b>Male</b></td>
+                                        <td><b>Female</b></td>
+                                        <td><b>Intersex</b></td>
+                                        <td><b>Total</b></td>
+                                    </tr>
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NAIROBI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nairobi_male_population" id="nairobi_male_population" value="{{nairobi_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nairobi_female_population" id="nairobi_female_population" value="{{nairobi_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nairobi_intersex_population" id="nairobi_intersex_population" value="{{nairobi_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nairobi_total_population" id="nairobi_total_population" value="{{nairobi_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NYANDARUA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyandarua_male_population" id="nyandarua_male_population" value="{{nyandarua_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyandarua_female_population" id="nyandarua_female_population" value="{{nyandarua_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyandarua_intersex_population" id="nyandarua_intersex_population" value="{{nyandarua_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyandarua_total_population" id="nyandarua_total_population" value="{{nyandarua_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NYERI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyeri_male_population" id="nyeri_male_population" value="{{nyeri_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyeri_female_population" id="nyeri_female_population" value="{{nyeri_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyeri_intersex_population" id="nyeri_intersex_population" value="{{nyeri_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyeri_total_population" id="nyeri_total_population" value="{{nyeri_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KIRINYAGA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kirinyaga_male_population" id="kirinyaga_male_population" value="{{kirinyaga_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kirinyaga_female_population" id="kirinyaga_female_population" value="{{kirinyaga_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kirinyaga_intersex_population" id="kirinyaga_intersex_population" value="{{kirinyaga_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kirinyaga_total_population" id="kirinyaga_total_population" value="{{kirinyaga_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MURANG'A</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="muranga_male_population" id="muranga_male_population" value="{{muranga_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="muranga_female_population" id="muranga_female_population" value="{{muranga_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="muranga_intersex_population" id="muranga_intersex_population" value="{{muranga_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="muranga_total_population" id="muranga_total_population" value="{{muranga_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KIAMBU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kiambu_male_population" id="kiambu_male_population" value="{{kiambu_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kiambu_female_population" id="kiambu_female_population" value="{{kiambu_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kiambu_intersex_population" id="kiambu_intersex_population" value="{{kiambu_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kiambu_total_population" id="kiambu_total_population" value="{{kiambu_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MOMBASA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mombasa_male_population" id="mombasa_male_population" value="{{mombasa_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mombasa_female_population" id="mombasa_female_population" value="{{mombasa_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mombasa_intersex_population" id="mombasa_intersex_population" value="{{mombasa_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mombasa_total_population" id="mombasa_total_population" value="{{mombasa_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KWALE</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kwale_male_population" id="kwale_male_population" value="{{kwale_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kwale_female_population" id="kwale_female_population" value="{{kwale_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kwale_intersex_population" id="kwale_intersex_population" value="{{kwale_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kwale_total_population" id="kwale_total_population" value="{{kwale_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KILIFI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kilifi_male_population" id="kilifi_male_population" value="{{kilifi_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kilifi_female_population" id="kilifi_female_population" value="{{kilifi_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kilifi_intersex_population" id="kilifi_intersex_population" value="{{kilifi_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kilifi_total_population" id="kilifi_total_population" value="{{kilifi_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+                                    <tr>
+                                        <td><b>TANA RIVER</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tanariver_male_population" id="tanariver_male_population" value="{{tanariver_male_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tanariver_female_population" id="tanariver_female_population" value="{{tanariver_female_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tanariver_intersex_population" id="tanariver_intersex_population" value="{{tanariver_intersex_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tanariver_total_population" id="tanariver_total_population" value="{{tanariver_total_population}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+<!--                                    <tr>-->
+<!--                                        <td><b>LAMU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="lamu_male_population" id="lamu_male_population" value="{{lamu_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="lamu_female_population" id="lamu_female_population" value="{{lamu_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="lamu_intersex_population" id="lamu_intersex_population" value="{{lamu_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="lamu_total_population" id="lamu_total_population" value="{{lamu_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>TAITA TAVETA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="taitataveta_male_population" id="taitataveta_male_population" value="{{taitataveta_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="taitataveta_female_population" id="taitataveta_female_population" value="{{taitataveta_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="taitataveta_intersex_population" id="taitataveta_intersex_population" value="{{taitataveta_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="taitataveta_total_population" id="taitataveta_total_population" value="{{taitataveta_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+                                    <tr>
+                                        <td><b>MARSABIT</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="marsabit_male_population" id="marsabit_male_population" value="{{marsabit_male_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="marsabit_female_population" id="marsabit_female_population" value="{{marsabit_female_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="marsabit_intersex_population" id="marsabit_intersex_population" value="{{marsabit_intersex_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="marsabit_total_population" id="marsabit_total_population" value="{{marsabit_total_population}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+<!--                                    <tr>-->
+<!--                                        <td><b>ISIOLO</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="isiolo_male_population" id="isiolo_male_population" value="{{isiolo_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="isiolo_female_population" id="isiolo_female_population" value="{{isiolo_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="isiolo_intersex_population" id="isiolo_intersex_population" value="{{isiolo_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="isiolo_total_population" id="isiolo_total_population" value="{{isiolo_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MERU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="meru_male_population" id="meru_male_population" value="{{meru_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="meru_female_population" id="meru_female_population" value="{{meru_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="meru_intersex_population" id="meru_intersex_population" value="{{meru_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="meru_total_population" id="meru_total_population" value="{{meru_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>THARAKA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="tharaka_male_population" id="tharaka_male_population" value="{{tharaka_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="tharaka_female_population" id="tharaka_female_population" value="{{tharaka_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="tharaka_intersex_population" id="tharaka_intersex_population" value="{{tharaka_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="tharaka_total_population" id="tharaka_total_population" value="{{tharaka_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>EMBU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="embu_male_population" id="embu_male_population" value="{{embu_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="embu_female_population" id="embu_female_population" value="{{embu_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="embu_intersex_population" id="embu_intersex_population" value="{{embu_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="embu_total_population" id="embu_total_population" value="{{embu_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KITUI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kitui_male_population" id="kitui_male_population" value="{{kitui_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kitui_female_population" id="kitui_female_population" value="{{kitui_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kitui_intersex_population" id="kitui_intersex_population" value="{{kitui_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kitui_total_population" id="kitui_total_population" value="{{kitui_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MACHAKOS</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="machakos_male_population" id="machakos_male_population" value="{{machakos_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="machakos_female_population" id="machakos_female_population" value="{{machakos_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="machakos_intersex_population" id="machakos_intersex_population" value="{{machakos_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="machakos_total_population" id="machakos_total_population" value="{{machakos_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MAKUENI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="makueni_male_population" id="makueni_male_population" value="{{makueni_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="makueni_female_population" id="makueni_female_population" value="{{makueni_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="makueni_intersex_population" id="makueni_intersex_population" value="{{makueni_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="makueni_total_population" id="makueni_total_population" value="{{makueni_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+                                    <tr>
+                                        <td><b>GARISSA</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="garissa_male_population" id="garissa_male_population" value="{{garissa_male_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="garissa_female_population" id="garissa_female_population" value="{{garissa_female_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="garissa_intersex_population" id="garissa_intersex_population" value="{{garissa_intersex_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="garissa_total_population" id="garissa_total_population" value="{{garissa_total_population}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>WAJIR</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="wajir_male_population" id="wajir_male_population" value="{{wajir_male_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="wajir_female_population" id="wajir_female_population" value="{{wajir_female_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="wajir_intersex_population" id="wajir_intersex_population" value="{{wajir_intersex_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="wajir_total_population" id="wajir_total_population" value="{{wajir_total_population}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MANDERA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mandera_male_population" id="mandera_male_population" value="{{mandera_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mandera_female_population" id="mandera_female_population" value="{{mandera_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mandera_intersex_population" id="mandera_intersex_population" value="{{mandera_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mandera_total_population" id="mandera_total_population" value="{{mandera_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>SIAYA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="siaya_male_population" id="siaya_male_population" value="{{siaya_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="siaya_female_population" id="siaya_female_population" value="{{siaya_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="siaya_intersex_population" id="siaya_intersex_population" value="{{siaya_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="siaya_total_population" id="siaya_total_population" value="{{siaya_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KISUMU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisumu_male_population" id="kisumu_male_population" value="{{kisumu_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisumu_female_population" id="kisumu_female_population" value="{{kisumu_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisumu_intersex_population" id="kisumu_intersex_population" value="{{kisumu_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisumu_total_population" id="kisumu_total_population" value="{{kisumu_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>HOMABAY</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="homabay_male_population" id="homabay_male_population" value="{{homabay_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="homabay_female_population" id="homabay_female_population" value="{{homabay_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="homabay_intersex_population" id="homabay_intersex_population" value="{{homabay_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="homabay_total_population" id="homabay_total_population" value="{{homabay_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MIGORI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="migori_male_population" id="migori_male_population" value="{{migori_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="migori_female_population" id="migori_female_population" value="{{migori_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="migori_intersex_population" id="migori_intersex_population" value="{{migori_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="migori_total_population" id="migori_total_population" value="{{migori_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KISII</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisii_male_population" id="kisii_male_population" value="{{kisii_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisii_female_population" id="kisii_female_population" value="{{kisii_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisii_intersex_population" id="kisii_intersex_population" value="{{kisii_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisii_total_population" id="kisii_total_population" value="{{kisii_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NYAMIRA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyamira_male_population" id="nyamira_male_population" value="{{nyamira_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyamira_female_population" id="nyamira_female_population" value="{{nyamira_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyamira_intersex_population" id="nyamira_intersex_population" value="{{nyamira_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyamira_total_population" id="nyamira_total_population" value="{{nyamira_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>TURKANA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="turkana_male_population" id="turkana_male_population" value="{{turkana_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="turkana_female_population" id="turkana_female_population" value="{{turkana_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="turkana_intersex_population" id="turkana_intersex_population" value="{{turkana_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="turkana_total_population" id="turkana_total_population" value="{{turkana_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>WESTPOKOT</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="westpokot_male_population" id="westpokot_male_population" value="{{westpokot_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="westpokot_female_population" id="westpokot_female_population" value="{{westpokot_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="westpokot_intersex_population" id="westpokot_intersex_population" value="{{westpokot_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="westpokot_total_population" id="westpokot_total_population" value="{{westpokot_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>SAMBURU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="samburu_male_population" id="samburu_male_population" value="{{samburu_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="samburu_female_population" id="samburu_female_population" value="{{samburu_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="samburu_intersex_population" id="samburu_intersex_population" value="{{samburu_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="samburu_total_population" id="samburu_total_population" value="{{samburu_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>TRANSNZOIA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="transnzoia_male_population" id="transnzoia_male_population" value="{{transnzoia_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="transnzoia_female_population" id="transnzoia_female_population" value="{{transnzoia_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="transnzoia_intersex_population" id="transnzoia_intersex_population" value="{{transnzoia_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="transnzoia_total_population" id="transnzoia_total_population" value="{{transnzoia_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+                                    <tr>
+                                        <td><b>BARINGO</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="baringo_male_population" id="baringo_male_population" value="{{baringo_male_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="baringo_female_population" id="baringo_female_population" value="{{baringo_female_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="baringo_intersex_population" id="baringo_intersex_population" value="{{baringo_intersex_population}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="baringo_total_population" id="baringo_total_population" value="{{baringo_total_population}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+<!--                                    <tr>-->
+<!--                                        <td><b>UASINGISHU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="uasingishu_male_population" id="uasingishu_male_population" value="{{uasingishu_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="uasingishu_female_population" id="uasingishu_female_population" value="{{uasingishu_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="uasingishu_intersex_population" id="uasingishu_intersex_population" value="{{uasingishu_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="uasingishu_total_population" id="uasingishu_total_population" value="{{uasingishu_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>ELGEYO-MARAKWET</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="elgeyomarakwet_male_population" id="elgeyomarakwet_male_population" value="{{elgeyomarakwet_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="elgeyomarakwet_female_population" id="elgeyomarakwet_female_population" value="{{elgeyomarakwet_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="elgeyomarakwet_intersex_population" id="elgeyomarakwet_intersex_population" value="{{elgeyomarakwet_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="elgeyomarakwet_total_population" id="elgeyomarakwet_total_population" value="{{elgeyomarakwet_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NANDI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nandi_male_population" id="nandi_male_population" value="{{nandi_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nandi_female_population" id="nandi_female_population" value="{{nandi_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nandi_intersex_population" id="nandi_intersex_population" value="{{nandi_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nandi_total_population" id="nandi_total_population" value="{{nandi_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>LAIKIPIA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="laikipia_male_population" id="laikipia_male_population" value="{{laikipia_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="laikipia_female_population" id="laikipia_female_population" value="{{laikipia_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="laikipia_intersex_population" id="laikipia_intersex_population" value="{{laikipia_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="laikipia_total_population" id="laikipia_total_population" value="{{laikipia_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NAKURU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nakuru_male_population" id="nakuru_male_population" value="{{nakuru_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nakuru_female_population" id="nakuru_female_population" value="{{nakuru_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nakuru_intersex_population" id="nakuru_intersex_population" value="{{nakuru_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nakuru_total_population" id="nakuru_total_population" value="{{nakuru_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NAROK</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="narok_male_population" id="narok_male_population" value="{{narok_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="narok_female_population" id="narok_female_population" value="{{narok_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="narok_intersex_population" id="narok_intersex_population" value="{{narok_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="narok_total_population" id="narok_total_population" value="{{narok_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KAJIADO</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kajiado_male_population" id="kajiado_male_population" value="{{kajiado_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kajiado_female_population" id="kajiado_female_population" value="{{kajiado_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kajiado_intersex_population" id="kajiado_intersex_population" value="{{kajiado_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kajiado_total_population" id="kajiado_total_population" value="{{kajiado_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KERICHO</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kericho_male_population" id="kericho_male_population" value="{{kericho_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kericho_female_population" id="kericho_female_population" value="{{kericho_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kericho_intersex_population" id="kericho_intersex_population" value="{{kericho_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kericho_total_population" id="kericho_total_population" value="{{kericho_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>BOMET</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bomet_male_population" id="bomet_male_population" value="{{bomet_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bomet_female_population" id="bomet_female_population" value="{{bomet_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bomet_intersex_population" id="bomet_intersex_population" value="{{bomet_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bomet_total_population" id="bomet_total_population" value="{{bomet_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KAKAMEGA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kakamega_male_population" id="kakamega_male_population" value="{{kakamega_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kakamega_female_population" id="kakamega_female_population" value="{{kakamega_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kakamega_intersex_population" id="kakamega_intersex_population" value="{{kakamega_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kakamega_total_population" id="kakamega_total_population" value="{{kakamega_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>VIHIGA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="vihiga_male_population" id="vihiga_male_population" value="{{vihiga_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="vihiga_female_population" id="vihiga_female_population" value="{{vihiga_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="vihiga_intersex_population" id="vihiga_intersex_population" value="{{vihiga_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="vihiga_total_population" id="vihiga_total_population" value="{{vihiga_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>BUNGOMA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bungoma_male_population" id="bungoma_male_population" value="{{bungoma_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bungoma_female_population" id="bungoma_female_population" value="{{bungoma_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bungoma_intersex_population" id="bungoma_intersex_population" value="{{bungoma_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bungoma_total_population" id="bungoma_total_population" value="{{bungoma_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>BUSIA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="busia_male_population" id="busia_male_population" value="{{busia_male_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="busia_female_population" id="busia_female_population" value="{{busia_female_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="busia_intersex_population" id="busia_intersex_population" value="{{busia_intersex_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="busia_total_population" id="busia_total_population" value="{{busia_total_population}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+<!--                                    <tr>-->
+<!--                                        <td><b>TOTAL</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="total_male_population" id="total_male_population" value="{{total_male_population}}" readonly>-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="total_female_population" id="total_female_population" value="{{total_female_population}}" readonly>-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="total_intersex_population" id="total_intersex_population" value="{{total_intersex_population}}" readonly>-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="total_total_population" id="total_total_population" value="{{total_total_population}}" readonly>-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

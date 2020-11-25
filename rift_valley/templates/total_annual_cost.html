@@ -1,0 +1,208 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+
+                                    <tr>
+                                        <td><b>Item</b></td>
+                                        <td><b>Estimated costs (KShs Million)</b></td>
+                                        <td><b>In US$ (1USD=100KShs)</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Early detection</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="early_detection_cost_ksh" id="early_detection_cost_ksh" value="{{early_detection_cost_ksh}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="early_detection_cost_usd" id="early_detection_cost_usd" value="{{early_detection_cost_usd}}" readonly>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Passive surveillance</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="passive_surveillance_ksh" id="passive_surveillance_ksh" value="{{passive_surveillance_ksh}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="passive_surveillance_usd" id="passive_surveillance_usd" value="{{passive_surveillance_usd}}" readonly>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Active surveillance</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="active_surveillance_ksh" id="active_surveillance_ksh" value="{{active_surveillance_ksh}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="active_surveillance_usd" id="active_surveillance_usd" value="{{active_surveillance_usd}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Lab diagnosis</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_diagnosis_cost_ksh" id="lab_diagnosis_cost_ksh" value="{{lab_diagnosis_cost_ksh}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="lab_diagnosis_cost_usd" id="lab_diagnosis_cost_usd" value="{{lab_diagnosis_cost_usd}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Coordination & communication</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="coord_and_comm_cost_ksh" id="coord_and_comm_cost_ksh" value="{{coord_and_comm_cost_ksh}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="coord_and_comm_cost_usd" id="coord_and_comm_cost_usd" value="{{coord_and_comm_cost_usd}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Movement control</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_cost_ksh" id="movement_control_cost_ksh" value="{{movement_control_cost_ksh}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_cost_usd" id="movement_control_cost_usd" value="{{movement_control_cost_usd}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Strategic vaccination</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="strategic_vaccination_cost_ksh" id="strategic_vaccination_cost_ksh" value="{{strategic_vaccination_cost_ksh}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="strategic_vaccination_cost_usd" id="strategic_vaccination_cost_usd" value="{{strategic_vaccination_cost_usd}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Personnel costs</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="personnel_cost_ksh" id="personnel_cost_ksh" value="{{personnel_cost_ksh}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="personnel_cost_usd" id="personnel_cost_usd" value="{{personnel_cost_usd}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Capital costs</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="capital_cost_ksh" id="capital_cost_ksh" value="{{capital_cost_ksh}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="capital_cost_usd" id="capital_cost_usd" value="{{capital_cost_usd}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td><b>SAM multiplier-2.89 for livestock sector</b></td>
+                                        <td><b>Contribution to 2010GDP</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Total</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="total_cost_ksh" id="total_cost_ksh" value="{{total_cost_ksh}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="total_cost_usd" id="total_cost_usd" value="{{total_cost_usd}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="livestock_sam_multiplier_total" id="livestock_sam_multiplier_total" value="{{livestock_sam_multiplier_total}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="2010GDP_contribution_total" id="2010GDP_contribution_total" value="{{2010GDP_contribution_total}}" >
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <b>SAM multlipier for household income </b>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="household_livestock_sam_multiplier_multiple" id="household_livestock_sam_multiplier_multiple" value="{{household_livestock_sam_multiplier_multiple}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="household_sam_multiplier_2010GDP" id="household_sam_multiplier_2010GDP" value="{{household_sam_multiplier_2010GDP}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

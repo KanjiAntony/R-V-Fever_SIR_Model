@@ -1,0 +1,1076 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table-bordered" width="1600px">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                            <h2>SALARIES  AND HOUSE ALLOWANCES FOR EMPLOYEES OF ZDU</h2>
+
+                                    <tr>
+                                        <td></td>
+                                        <td><b>MIN.</b></td>
+                                        <td><b>MAX</b></td>
+                                        <td><b>Average</b></td>
+                                        <td><b>HOUSE ALLOWANCE IN NAIROBI (KSH)</b></td>
+                                        <td><b>Medical all.</b></td>
+                                        <td><b>Commuter all.</b></td>
+                                        <td><b>Risk all.</b></td>
+                                        <td><b>Airtime</b></td>
+                                        <td><b>Annual pay</b></td>
+                                        <td><b>Leave all.</b></td>
+                                        <td><b>Total annual emoluments</b></td>
+                                        <td><b>No.</b></td>
+                                        <td><b>Annual cost (KShs) </b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>S</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_min" id="S_min" value="{{S_min}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_max" id="S_max" value="{{S_max}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_average" id="S_average" value="{{S_average}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_nairobi_house_allowance" id="S_nairobi_house_allowance" value="{{S_nairobi_house_allowance}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_medical_all" id="S_medical_all" value="{{S_medical_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_commuter_all" id="S_commuter_all" value="{{S_commuter_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_risk_all" id="S_risk_all" value="{{S_risk_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_airtime" id="S_airtime" value="{{S_airtime}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_annual_peak" id="S_annual_peak" value="{{S_annual_peak}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_leave_all" id="S_leave_all" value="{{S_leave_all}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_total_annual_emoluments" id="S_total_annual_emoluments" value="{{S_total_annual_emoluments}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_salary_no" id="S_salary_no" value="{{S_salary_no}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="S_annual_cost" id="S_annual_cost" value="{{S_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>R</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_min" id="R_min" value="{{R_min}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_max" id="R_max" value="{{R_max}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_average" id="R_average" value="{{R_average}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_nairobi_house_allowance" id="R_nairobi_house_allowance" value="{{R_nairobi_house_allowance}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_medical_all" id="R_medical_all" value="{{R_medical_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_commuter_all" id="R_commuter_all" value="{{R_commuter_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_risk_all" id="R_risk_all" value="{{R_risk_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_airtime" id="R_airtime" value="{{R_airtime}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_annual_peak" id="R_annual_peak" value="{{R_annual_peak}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_leave_all" id="R_leave_all" value="{{R_leave_all}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_total_annual_emoluments" id="R_total_annual_emoluments" value="{{R_total_annual_emoluments}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_salary_no" id="R_salary_no" value="{{R_salary_no}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="R_annual_cost" id="R_annual_cost" value="{{R_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Q</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_min" id="Q_min" value="{{Q_min}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_max" id="Q_max" value="{{Q_max}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_average" id="Q_average" value="{{Q_average}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_nairobi_house_allowance" id="Q_nairobi_house_allowance" value="{{Q_nairobi_house_allowance}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_medical_all" id="Q_medical_all" value="{{Q_medical_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_commuter_all" id="Q_commuter_all" value="{{Q_commuter_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_risk_all" id="Q_risk_all" value="{{Q_risk_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_airtime" id="Q_airtime" value="{{Q_airtime}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_annual_peak" id="Q_annual_peak" value="{{Q_annual_peak}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_leave_all" id="Q_leave_all" value="{{Q_leave_all}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_total_annual_emoluments" id="Q_total_annual_emoluments" value="{{Q_total_annual_emoluments}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_salary_no" id="Q_salary_no" value="{{Q_salary_no}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="Q_annual_cost" id="Q_annual_cost" value="{{Q_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>P</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_min" id="P_min" value="{{P_min}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_max" id="P_max" value="{{P_max}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_average" id="P_average" value="{{P_average}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_nairobi_house_allowance" id="P_nairobi_house_allowance" value="{{P_nairobi_house_allowance}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_medical_all" id="P_medical_all" value="{{P_medical_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_commuter_all" id="P_commuter_all" value="{{P_commuter_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_risk_all" id="P_risk_all" value="{{P_risk_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_airtime" id="P_airtime" value="{{P_airtime}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_annual_peak" id="P_annual_peak" value="{{P_annual_peak}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_leave_all" id="P_leave_all" value="{{P_leave_all}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_total_annual_emoluments" id="P_total_annual_emoluments" value="{{P_total_annual_emoluments}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_salary_no" id="P_salary_no" value="{{P_salary_no}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="P_annual_cost" id="P_annual_cost" value="{{P_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>N</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_min" id="N_min" value="{{N_min}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_max" id="N_max" value="{{N_max}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_average" id="N_average" value="{{N_average}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_nairobi_house_allowance" id="N_nairobi_house_allowance" value="{{N_nairobi_house_allowance}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_medical_all" id="N_medical_all" value="{{N_medical_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_commuter_all" id="N_commuter_all" value="{{N_commuter_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_risk_all" id="N_risk_all" value="{{N_risk_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_airtime" id="N_airtime" value="{{N_airtime}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_annual_peak" id="N_annual_peak" value="{{N_annual_peak}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_leave_all" id="N_leave_all" value="{{N_leave_all}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_total_annual_emoluments" id="N_total_annual_emoluments" value="{{N_total_annual_emoluments}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_salary_no" id="N_salary_no" value="{{N_salary_no}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="N_annual_cost" id="N_annual_cost" value="{{N_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>M</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_min" id="M_min" value="{{M_min}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_max" id="M_max" value="{{M_max}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_average" id="M_average" value="{{M_average}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_nairobi_house_allowance" id="M_nairobi_house_allowance" value="{{M_nairobi_house_allowance}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_medical_all" id="M_medical_all" value="{{M_medical_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_commuter_all" id="M_commuter_all" value="{{M_commuter_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_risk_all" id="M_risk_all" value="{{M_risk_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_airtime" id="M_airtime" value="{{M_airtime}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_annual_peak" id="M_annual_peak" value="{{M_annual_peak}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_leave_all" id="M_leave_all" value="{{M_leave_all}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_total_annual_emoluments" id="M_total_annual_emoluments" value="{{M_total_annual_emoluments}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_salary_no" id="M_salary_no" value="{{M_salary_no}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="M_annual_cost" id="M_annual_cost" value="{{M_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>L</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_min" id="L_min" value="{{L_min}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_max" id="L_max" value="{{L_max}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_average" id="L_average" value="{{L_average}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_nairobi_house_allowance" id="L_nairobi_house_allowance" value="{{L_nairobi_house_allowance}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_medical_all" id="L_medical_all" value="{{L_medical_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_commuter_all" id="L_commuter_all" value="{{L_commuter_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_risk_all" id="L_risk_all" value="{{L_risk_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_airtime" id="L_airtime" value="{{L_airtime}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_annual_peak" id="L_annual_peak" value="{{L_annual_peak}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_leave_all" id="L_leave_all" value="{{L_leave_all}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_total_annual_emoluments" id="L_total_annual_emoluments" value="{{L_total_annual_emoluments}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_salary_no" id="L_salary_no" value="{{L_salary_no}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="L_annual_cost" id="L_annual_cost" value="{{L_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>K</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_min" id="K_min" value="{{K_min}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_max" id="K_max" value="{{K_max}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_average" id="K_average" value="{{K_average}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_nairobi_house_allowance" id="K_nairobi_house_allowance" value="{{K_nairobi_house_allowance}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_medical_all" id="K_medical_all" value="{{K_medical_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_commuter_all" id="K_commuter_all" value="{{K_commuter_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_risk_all" id="K_risk_all" value="{{K_risk_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_airtime" id="K_airtime" value="{{K_airtime}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_annual_peak" id="K_annual_peak" value="{{K_annual_peak}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_leave_all" id="K_leave_all" value="{{K_leave_all}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_total_annual_emoluments" id="K_total_annual_emoluments" value="{{K_total_annual_emoluments}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_salary_no" id="K_salary_no" value="{{K_salary_no}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="K_annual_cost" id="K_annual_cost" value="{{K_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>J</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_min" id="J_min" value="{{J_min}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_max" id="J_max" value="{{J_max}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_average" id="J_average" value="{{J_average}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_nairobi_house_allowance" id="J_nairobi_house_allowance" value="{{J_nairobi_house_allowance}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_medical_all" id="J_medical_all" value="{{J_medical_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_commuter_all" id="J_commuter_all" value="{{J_commuter_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_risk_all" id="J_risk_all" value="{{J_risk_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_airtime" id="J_airtime" value="{{J_airtime}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_annual_peak" id="J_annual_peak" value="{{J_annual_peak}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_leave_all" id="J_leave_all" value="{{J_leave_all}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_total_annual_emoluments" id="J_total_annual_emoluments" value="{{J_total_annual_emoluments}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_salary_no" id="J_salary_no" value="{{J_salary_no}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="J_annual_cost" id="J_annual_cost" value="{{J_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>H</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_min" id="H_min" value="{{H_min}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_max" id="H_max" value="{{H_max}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_average" id="H_average" value="{{H_average}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_nairobi_house_allowance" id="H_nairobi_house_allowance" value="{{H_nairobi_house_allowance}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_medical_all" id="H_medical_all" value="{{H_medical_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_commuter_all" id="H_commuter_all" value="{{H_commuter_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_risk_all" id="H_risk_all" value="{{H_risk_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_airtime" id="H_airtime" value="{{H_airtime}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_annual_peak" id="H_annual_peak" value="{{H_annual_peak}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_leave_all" id="H_leave_all" value="{{H_leave_all}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_total_annual_emoluments" id="H_total_annual_emoluments" value="{{H_total_annual_emoluments}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_salary_no" id="H_salary_no" value="{{H_salary_no}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="H_annual_cost" id="H_annual_cost" value="{{H_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>G</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_min" id="G_min" value="{{G_min}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_max" id="G_max" value="{{G_max}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_average" id="G_average" value="{{G_average}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_nairobi_house_allowance" id="G_nairobi_house_allowance" value="{{G_nairobi_house_allowance}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_medical_all" id="G_medical_all" value="{{G_medical_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_commuter_all" id="G_commuter_all" value="{{G_commuter_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_risk_all" id="G_risk_all" value="{{G_risk_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_airtime" id="G_airtime" value="{{G_airtime}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_annual_peak" id="G_annual_peak" value="{{G_annual_peak}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_leave_all" id="G_leave_all" value="{{G_leave_all}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_total_annual_emoluments" id="G_total_annual_emoluments" value="{{G_total_annual_emoluments}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_salary_no" id="G_salary_no" value="{{G_salary_no}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="G_annual_cost" id="G_annual_cost" value="{{G_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>F</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_min" id="F_min" value="{{F_min}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_max" id="F_max" value="{{F_max}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_average" id="F_average" value="{{F_average}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_nairobi_house_allowance" id="F_nairobi_house_allowance" value="{{F_nairobi_house_allowance}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_medical_all" id="F_medical_all" value="{{F_medical_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_commuter_all" id="F_commuter_all" value="{{F_commuter_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_risk_all" id="F_risk_all" value="{{F_risk_all}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_airtime" id="F_airtime" value="{{F_airtime}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_annual_peak" id="F_annual_peak" value="{{F_annual_peak}}" readonly>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_leave_all" id="F_leave_all" value="{{F_leave_all}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_total_annual_emoluments" id="F_total_annual_emoluments" value="{{F_total_annual_emoluments}}" readonly>
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_salary_no" id="F_salary_no" value="{{F_salary_no}}">
+                                            </div>
+                                        </td>
+
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="F_annual_cost" id="F_annual_cost" value="{{F_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>TOTAL</b></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+
+
+                                         <td>
+
+                                        </td>
+
+                                         <td>
+
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+
+
+                                         <td>
+
+                                        </td>
+
+                                         <td>
+
+                                        </td>
+
+                                         <td>
+
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="salary_allowance_total" id="salary_allowance_total" value="{{salary_allowance_total}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                                    <tr>
+                                        <td><b>Measure</b></td>
+                                        <td><b>Current</b></td>
+                                        <td><b>With 20% increase in annual costs</b></td>
+                                        <td><b>Change (%)</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>NPV</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="NPV_current" id="NPV_current" value="{{NPV_current}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="NPV_with_20_percent_increase_annual_cost" id="NPV_with_20_percent_increase_annual_cost" value="{{NPV_with_20_percent_increase_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="NPV_percent_change" id="NPV_percent_change" value="{{NPV_percent_change}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>BCR</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="BCR_current" id="BCR_current" value="{{BCR_current}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="BCR_with_20_percent_increase_annual_cost" id="BCR_with_20_percent_increase_annual_cost" value="{{BCR_with_20_percent_increase_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="BCR_percent_change" id="BCR_percent_change" value="{{BCR_percent_change}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>IRR</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="IRR_current" id="IRR_current" value="{{IRR_current}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="IRR_with_20_percent_increase_annual_cost" id="IRR_with_20_percent_increase_annual_cost" value="{{IRR_with_20_percent_increase_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="IRR_percent_change" id="IRR_percent_change" value="{{IRR_percent_change}}" readonly>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

@@ -1,0 +1,1668 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                                    <tr>
+                                        <td><b>County</b></td>
+<!--                                        <td><b>Exotic Cattle</b></td>-->
+                                        <td><b>Indigenous cattle</b></td>
+                                        <td><b>Sheep</b></td>
+                                        <td><b>Goats</b></td>
+                                        <td><b>Camels</b></td>
+<!--                                        <td><b>Donkeys</b></td>-->
+                                    </tr>
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NAIROBI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nairobi_exotic_cattle" id="nairobi_exotic_cattle" value="{{nairobi_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nairobi_indigenous_cattle" id="nairobi_indigenous_cattle" value="{{nairobi_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nairobi_sheep" id="nairobi_sheep" value="{{nairobi_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nairobi_goats" id="nairobi_goats" value="{{nairobi_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nairobi_camels" id="nairobi_camels" value="{{nairobi_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nairobi_donkeys" id="nairobi_donkeys" value="{{nairobi_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NYANDARUA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyandarua_exotic_cattle" id="nyandarua_exotic_cattle" value="{{nyandarua_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyandarua_indigenous_cattle" id="nyandarua_indigenous_cattle" value="{{nyandarua_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyandarua_sheep" id="nyandarua_sheep" value="{{nyandarua_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyandarua_goats" id="nyandarua_goats" value="{{nyandarua_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyandarua_camels" id="nyandarua_camels" value="{{nyandarua_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyandarua_donkeys" id="nyandarua_donkeys" value="{{nyandarua_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NYERI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyeri_exotic_cattle" id="nyeri_exotic_cattle" value="{{nyeri_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyeri_indigenous_cattle" id="nyeri_indigenous_cattle" value="{{nyeri_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyeri_sheep" id="nyeri_sheep" value="{{nyeri_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyeri_goats" id="nyeri_goats" value="{{nyeri_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyeri_camels" id="nyeri_camels" value="{{nyeri_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyeri_donkeys" id="nyeri_donkeys" value="{{nyeri_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KIRINYAGA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kirinyaga_exotic_cattle" id="kirinyaga_exotic_cattle" value="{{kirinyaga_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kirinyaga_indigenous_cattle" id="kirinyaga_indigenous_cattle" value="{{kirinyaga_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kirinyaga_sheep" id="kirinyaga_sheep" value="{{kirinyaga_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kirinyaga_goats" id="kirinyaga_goats" value="{{kirinyaga_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kirinyaga_camels" id="kirinyaga_camels" value="{{kirinyaga_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kirinyaga_donkeys" id="kirinyaga_donkeys" value="{{kirinyaga_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MURANG'A</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="muranga_exotic_cattle" id="muranga_exotic_cattle" value="{{muranga_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="muranga_indigenous_cattle" id="muranga_indigenous_cattle" value="{{muranga_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="muranga_sheep" id="muranga_sheep" value="{{muranga_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="muranga_goats" id="muranga_goats" value="{{muranga_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="muranga_camels" id="muranga_camels" value="{{muranga_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="muranga_donkeys" id="muranga_donkeys" value="{{muranga_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KIAMBU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kiambu_exotic_cattle" id="kiambu_exotic_cattle" value="{{kiambu_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kiambu_indigenous_cattle" id="kiambu_indigenous_cattle" value="{{kiambu_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kiambu_sheep" id="kiambu_sheep" value="{{kiambu_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kiambu_goats" id="kiambu_goats" value="{{kiambu_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kiambu_camels" id="kiambu_camels" value="{{kiambu_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kiambu_donkeys" id="kiambu_donkeys" value="{{kiambu_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MOMBASA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mombasa_exotic_cattle" id="mombasa_exotic_cattle" value="{{mombasa_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mombasa_indigenous_cattle" id="mombasa_indigenous_cattle" value="{{mombasa_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mombasa_sheep" id="mombasa_sheep" value="{{mombasa_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mombasa_goats" id="mombasa_goats" value="{{mombasa_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mombasa_camels" id="mombasa_camels" value="{{mombasa_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mombasa_donkeys" id="mombasa_donkeys" value="{{mombasa_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KWALE</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kwale_exotic_cattle" id="kwale_exotic_cattle" value="{{kwale_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kwale_indigenous_cattle" id="kwale_indigenous_cattle" value="{{kwale_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kwale_sheep" id="kwale_sheep" value="{{kwale_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kwale_goats" id="kwale_goats" value="{{kwale_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kwale_camels" id="kwale_camels" value="{{kwale_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kwale_donkeys" id="kwale_donkeys" value="{{kwale_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KILIFI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kilifi_exotic_cattle" id="kilifi_exotic_cattle" value="{{kilifi_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kilifi_indigenous_cattle" id="kilifi_indigenous_cattle" value="{{kilifi_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kilifi_sheep" id="kilifi_sheep" value="{{kilifi_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kilifi_goats" id="kilifi_goats" value="{{kilifi_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kilifi_camels" id="kilifi_camels" value="{{kilifi_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kilifi_donkeys" id="kilifi_donkeys" value="{{kilifi_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+                                    <tr>
+                                        <td><b>TANA RIVER</b></td>
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="tanariver_exotic_cattle" id="tanariver_exotic_cattle" value="{{tanariver_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tanariver_indigenous_cattle" id="tanariver_indigenous_cattle" value="{{tanariver_indigenous_cattle}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tanariver_sheep" id="tanariver_sheep" value="{{tanariver_sheep}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tanariver_goats" id="tanariver_goats" value="{{tanariver_goats}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tanariver_camels" id="tanariver_camels" value="{{tanariver_camels}}">
+                                            </div>
+                                        </td>
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="tanariver_donkeys" id="tanariver_donkeys" value="{{tanariver_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+                                    </tr>
+
+<!--                                    <tr>-->
+<!--                                        <td><b>LAMU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="lamu_exotic_cattle" id="lamu_exotic_cattle" value="{{lamu_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="lamu_indigenous_cattle" id="lamu_indigenous_cattle" value="{{lamu_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="lamu_sheep" id="lamu_sheep" value="{{lamu_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="lamu_goats" id="lamu_goats" value="{{lamu_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="lamu_camels" id="lamu_camels" value="{{lamu_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="lamu_donkeys" id="lamu_donkeys" value="{{lamu_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>TAITA TAVETA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="taitataveta_exotic_cattle" id="taitataveta_exotic_cattle" value="{{taitataveta_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="taitataveta_indigenous_cattle" id="taitataveta_indigenous_cattle" value="{{taitataveta_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="taitataveta_sheep" id="taitataveta_sheep" value="{{taitataveta_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="taitataveta_goats" id="taitataveta_goats" value="{{taitataveta_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="taitataveta_camels" id="taitataveta_camels" value="{{taitataveta_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="taitataveta_donkeys" id="taitataveta_donkeys" value="{{taitataveta_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+                                        <td><b>MARSABIT</b></td>
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="marsabit_exotic_cattle" id="marsabit_exotic_cattle" value="{{marsabit_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="marsabit_indigenous_cattle" id="marsabit_indigenous_cattle" value="{{marsabit_indigenous_cattle}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="marsabit_sheep" id="marsabit_sheep" value="{{marsabit_sheep}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="marsabit_goats" id="marsabit_goats" value="{{marsabit_goats}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="marsabit_camels" id="marsabit_camels" value="{{marsabit_camels}}">
+                                            </div>
+                                        </td>
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="marsabit_donkeys" id="marsabit_donkeys" value="{{marsabit_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+                                    </tr>
+
+<!--                                    <tr>-->
+<!--                                        <td><b>ISIOLO</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="isiolo_exotic_cattle" id="isiolo_exotic_cattle" value="{{isiolo_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="isiolo_indigenous_cattle" id="isiolo_indigenous_cattle" value="{{isiolo_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="isiolo_sheep" id="isiolo_sheep" value="{{isiolo_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="isiolo_goats" id="isiolo_goats" value="{{isiolo_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="isiolo_camels" id="isiolo_camels" value="{{isiolo_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="isiolo_donkeys" id="isiolo_donkeys" value="{{isiolo_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MERU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="meru_exotic_cattle" id="meru_exotic_cattle" value="{{meru_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="meru_indigenous_cattle" id="meru_indigenous_cattle" value="{{meru_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="meru_sheep" id="meru_sheep" value="{{meru_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="meru_goats" id="meru_goats" value="{{meru_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="meru_camels" id="meru_camels" value="{{meru_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="meru_donkeys" id="meru_donkeys" value="{{meru_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>THARAKA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="tharaka_exotic_cattle" id="tharaka_exotic_cattle" value="{{tharaka_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="tharaka_indigenous_cattle" id="tharaka_indigenous_cattle" value="{{tharaka_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="tharaka_sheep" id="tharaka_sheep" value="{{tharaka_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="tharaka_goats" id="tharaka_goats" value="{{tharaka_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="tharaka_camels" id="tharaka_camels" value="{{tharaka_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="tharaka_donkeys" id="tharaka_donkeys" value="{{tharaka_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>EMBU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="embu_exotic_cattle" id="embu_exotic_cattle" value="{{embu_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="embu_indigenous_cattle" id="embu_indigenous_cattle" value="{{embu_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="embu_sheep" id="embu_sheep" value="{{embu_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="embu_goats" id="embu_goats" value="{{embu_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="embu_camels" id="embu_camels" value="{{embu_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="embu_donkeys" id="embu_donkeys" value="{{embu_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KITUI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kitui_exotic_cattle" id="kitui_exotic_cattle" value="{{kitui_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kitui_indigenous_cattle" id="kitui_indigenous_cattle" value="{{kitui_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kitui_sheep" id="kitui_sheep" value="{{kitui_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kitui_goats" id="kitui_goats" value="{{kitui_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kitui_camels" id="kitui_camels" value="{{kitui_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kitui_donkeys" id="kitui_donkeys" value="{{kitui_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MACHAKOS</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="machakos_exotic_cattle" id="machakos_exotic_cattle" value="{{machakos_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="machakos_indigenous_cattle" id="machakos_indigenous_cattle" value="{{machakos_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="machakos_sheep" id="machakos_sheep" value="{{machakos_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="machakos_goats" id="machakos_goats" value="{{machakos_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="machakos_camels" id="machakos_camels" value="{{machakos_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="machakos_donkeys" id="machakos_donkeys" value="{{machakos_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MAKUENI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="makueni_exotic_cattle" id="makueni_exotic_cattle" value="{{makueni_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="makueni_indigenous_cattle" id="makueni_indigenous_cattle" value="{{makueni_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="makueni_sheep" id="makueni_sheep" value="{{makueni_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="makueni_goats" id="makueni_goats" value="{{makueni_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="makueni_camels" id="makueni_camels" value="{{makueni_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="makueni_donkeys" id="makueni_donkeys" value="{{makueni_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+                                    <tr>
+                                        <td><b>GARISSA</b></td>
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="garissa_exotic_cattle" id="garissa_exotic_cattle" value="{{garissa_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="garissa_indigenous_cattle" id="garissa_indigenous_cattle" value="{{garissa_indigenous_cattle}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="garissa_sheep" id="garissa_sheep" value="{{garissa_sheep}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="garissa_goats" id="garissa_goats" value="{{garissa_goats}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="garissa_camels" id="garissa_camels" value="{{garissa_camels}}">
+                                            </div>
+                                        </td>
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="garissa_donkeys" id="garissa_donkeys" value="{{garissa_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>WAJIR</b></td>
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="wajir_exotic_cattle" id="wajir_exotic_cattle" value="{{wajir_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="wajir_indigenous_cattle" id="wajir_indigenous_cattle" value="{{wajir_indigenous_cattle}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="wajir_sheep" id="wajir_sheep" value="{{wajir_sheep}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="wajir_goats" id="wajir_goats" value="{{wajir_goats}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="wajir_camels" id="wajir_camels" value="{{wajir_camels}}">
+                                            </div>
+                                        </td>
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="wajir_donkeys" id="wajir_donkeys" value="{{wajir_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+                                    </tr>
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MANDERA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mandera_exotic_cattle" id="mandera_exotic_cattle" value="{{mandera_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mandera_indigenous_cattle" id="mandera_indigenous_cattle" value="{{mandera_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mandera_sheep" id="mandera_sheep" value="{{mandera_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mandera_goats" id="mandera_goats" value="{{mandera_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mandera_camels" id="mandera_camels" value="{{mandera_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="mandera_donkeys" id="mandera_donkeys" value="{{mandera_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>SIAYA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="siaya_exotic_cattle" id="siaya_exotic_cattle" value="{{siaya_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="siaya_indigenous_cattle" id="siaya_indigenous_cattle" value="{{siaya_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="siaya_sheep" id="siaya_sheep" value="{{siaya_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="siaya_goats" id="siaya_goats" value="{{siaya_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="siaya_camels" id="siaya_camels" value="{{siaya_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="siaya_donkeys" id="siaya_donkeys" value="{{siaya_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KISUMU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisumu_exotic_cattle" id="kisumu_exotic_cattle" value="{{kisumu_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisumu_indigenous_cattle" id="kisumu_indigenous_cattle" value="{{kisumu_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisumu_sheep" id="kisumu_sheep" value="{{kisumu_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisumu_goats" id="kisumu_goats" value="{{kisumu_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisumu_camels" id="kisumu_camels" value="{{kisumu_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisumu_donkeys" id="kisumu_donkeys" value="{{kisumu_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>HOMABAY</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="homabay_exotic_cattle" id="homabay_exotic_cattle" value="{{homabay_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="homabay_indigenous_cattle" id="homabay_indigenous_cattle" value="{{homabay_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="homabay_sheep" id="homabay_sheep" value="{{homabay_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="homabay_goats" id="homabay_goats" value="{{homabay_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="homabay_camels" id="homabay_camels" value="{{homabay_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="homabay_donkeys" id="homabay_donkeys" value="{{homabay_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>MIGORI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="migori_exotic_cattle" id="migori_exotic_cattle" value="{{migori_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="migori_indigenous_cattle" id="migori_indigenous_cattle" value="{{migori_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="migori_sheep" id="migori_sheep" value="{{migori_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="migori_goats" id="migori_goats" value="{{migori_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="migori_camels" id="migori_camels" value="{{migori_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="migori_donkeys" id="migori_donkeys" value="{{migori_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KISII</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisii_exotic_cattle" id="kisii_exotic_cattle" value="{{kisii_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisii_indigenous_cattle" id="kisii_indigenous_cattle" value="{{kisii_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisii_sheep" id="kisii_sheep" value="{{kisii_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisii_goats" id="kisii_goats" value="{{kisii_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisii_camels" id="kisii_camels" value="{{kisii_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kisii_donkeys" id="kisii_donkeys" value="{{kisii_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NYAMIRA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyamira_exotic_cattle" id="nyamira_exotic_cattle" value="{{nyamira_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyamira_indigenous_cattle" id="nyamira_indigenous_cattle" value="{{nyamira_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyamira_sheep" id="nyamira_sheep" value="{{nyamira_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyamira_goats" id="nyamira_goats" value="{{nyamira_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyamira_camels" id="nyamira_camels" value="{{nyamira_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nyamira_donkeys" id="nyamira_donkeys" value="{{nyamira_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>TURKANA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="turkana_exotic_cattle" id="turkana_exotic_cattle" value="{{turkana_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="turkana_indigenous_cattle" id="turkana_indigenous_cattle" value="{{turkana_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="turkana_sheep" id="turkana_sheep" value="{{turkana_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="turkana_goats" id="turkana_goats" value="{{turkana_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="turkana_camels" id="turkana_camels" value="{{turkana_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="turkana_donkeys" id="turkana_donkeys" value="{{turkana_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>WESTPOKOT</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="westpokot_exotic_cattle" id="westpokot_exotic_cattle" value="{{westpokot_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="westpokot_indigenous_cattle" id="westpokot_indigenous_cattle" value="{{westpokot_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="westpokot_sheep" id="westpokot_sheep" value="{{westpokot_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="westpokot_goats" id="westpokot_goats" value="{{westpokot_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="westpokot_camels" id="westpokot_camels" value="{{westpokot_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="westpokot_donkeys" id="westpokot_donkeys" value="{{westpokot_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>SAMBURU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="samburu_exotic_cattle" id="samburu_exotic_cattle" value="{{samburu_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="samburu_indigenous_cattle" id="samburu_indigenous_cattle" value="{{samburu_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="samburu_sheep" id="samburu_sheep" value="{{samburu_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="samburu_goats" id="samburu_goats" value="{{samburu_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="samburu_camels" id="samburu_camels" value="{{samburu_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="samburu_donkeys" id="samburu_donkeys" value="{{samburu_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>TRANSNZOIA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="transnzoia_exotic_cattle" id="transnzoia_exotic_cattle" value="{{transnzoia_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="transnzoia_indigenous_cattle" id="transnzoia_indigenous_cattle" value="{{transnzoia_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="transnzoia_sheep" id="transnzoia_sheep" value="{{transnzoia_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="transnzoia_goats" id="transnzoia_goats" value="{{transnzoia_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="transnzoia_camels" id="transnzoia_camels" value="{{transnzoia_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="transnzoia_donkeys" id="transnzoia_donkeys" value="{{transnzoia_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+                                    <tr>
+                                        <td><b>BARINGO</b></td>
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="baringo_exotic_cattle" id="baringo_exotic_cattle" value="{{baringo_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="baringo_indigenous_cattle" id="baringo_indigenous_cattle" value="{{baringo_indigenous_cattle}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="baringo_sheep" id="baringo_sheep" value="{{baringo_sheep}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="baringo_goats" id="baringo_goats" value="{{baringo_goats}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="baringo_camels" id="baringo_camels" value="{{baringo_camels}}">
+                                            </div>
+                                        </td>
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="baringo_donkeys" id="baringo_donkeys" value="{{baringo_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+                                    </tr>
+
+<!--                                    <tr>-->
+<!--                                        <td><b>UASINGISHU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="uasingishu_exotic_cattle" id="uasingishu_exotic_cattle" value="{{uasingishu_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="uasingishu_indigenous_cattle" id="uasingishu_indigenous_cattle" value="{{uasingishu_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="uasingishu_sheep" id="uasingishu_sheep" value="{{uasingishu_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="uasingishu_goats" id="uasingishu_goats" value="{{uasingishu_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="uasingishu_camels" id="uasingishu_camels" value="{{uasingishu_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="uasingishu_donkeys" id="uasingishu_donkeys" value="{{uasingishu_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>ELGEYO-MARAKWET</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="elgeyomarakwet_exotic_cattle" id="elgeyomarakwet_exotic_cattle" value="{{elgeyomarakwet_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="elgeyomarakwet_indigenous_cattle" id="elgeyomarakwet_indigenous_cattle" value="{{elgeyomarakwet_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="elgeyomarakwet_sheep" id="elgeyomarakwet_sheep" value="{{elgeyomarakwet_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="elgeyomarakwet_goats" id="elgeyomarakwet_goats" value="{{elgeyomarakwet_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="elgeyomarakwet_camels" id="elgeyomarakwet_camels" value="{{elgeyomarakwet_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="elgeyomarakwet_donkeys" id="elgeyomarakwet_donkeys" value="{{elgeyomarakwet_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NANDI</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nandi_exotic_cattle" id="nandi_exotic_cattle" value="{{nandi_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nandi_indigenous_cattle" id="nandi_indigenous_cattle" value="{{nandi_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nandi_sheep" id="nandi_sheep" value="{{nandi_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nandi_goats" id="nandi_goats" value="{{nandi_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nandi_camels" id="nandi_camels" value="{{nandi_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nandi_donkeys" id="nandi_donkeys" value="{{nandi_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>LAIKIPIA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="laikipia_exotic_cattle" id="laikipia_exotic_cattle" value="{{laikipia_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="laikipia_indigenous_cattle" id="laikipia_indigenous_cattle" value="{{laikipia_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="laikipia_sheep" id="laikipia_sheep" value="{{laikipia_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="laikipia_goats" id="laikipia_goats" value="{{laikipia_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="laikipia_camels" id="laikipia_camels" value="{{laikipia_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="laikipia_donkeys" id="laikipia_donkeys" value="{{laikipia_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NAKURU</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nakuru_exotic_cattle" id="nakuru_exotic_cattle" value="{{nakuru_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nakuru_indigenous_cattle" id="nakuru_indigenous_cattle" value="{{nakuru_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nakuru_sheep" id="nakuru_sheep" value="{{nakuru_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nakuru_goats" id="nakuru_goats" value="{{nakuru_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nakuru_camels" id="nakuru_camels" value="{{nakuru_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="nakuru_donkeys" id="nakuru_donkeys" value="{{nakuru_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>NAROK</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="narok_exotic_cattle" id="narok_exotic_cattle" value="{{narok_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="narok_indigenous_cattle" id="narok_indigenous_cattle" value="{{narok_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="narok_sheep" id="narok_sheep" value="{{narok_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="narok_goats" id="narok_goats" value="{{narok_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="narok_camels" id="narok_camels" value="{{narok_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="narok_donkeys" id="narok_donkeys" value="{{narok_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KAJIADO</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kajiado_exotic_cattle" id="kajiado_exotic_cattle" value="{{kajiado_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kajiado_indigenous_cattle" id="kajiado_indigenous_cattle" value="{{kajiado_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kajiado_sheep" id="kajiado_sheep" value="{{kajiado_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kajiado_goats" id="kajiado_goats" value="{{kajiado_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kajiado_camels" id="kajiado_camels" value="{{kajiado_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kajiado_donkeys" id="kajiado_donkeys" value="{{kajiado_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KERICHO</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kericho_exotic_cattle" id="kericho_exotic_cattle" value="{{kericho_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kericho_indigenous_cattle" id="kericho_indigenous_cattle" value="{{kericho_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kericho_sheep" id="kericho_sheep" value="{{kericho_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kericho_goats" id="kericho_goats" value="{{kericho_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kericho_camels" id="kericho_camels" value="{{kericho_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kericho_donkeys" id="kericho_donkeys" value="{{kericho_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>BOMET</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bomet_exotic_cattle" id="bomet_exotic_cattle" value="{{bomet_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bomet_indigenous_cattle" id="bomet_indigenous_cattle" value="{{bomet_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bomet_sheep" id="bomet_sheep" value="{{bomet_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bomet_goats" id="bomet_goats" value="{{bomet_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bomet_camels" id="bomet_camels" value="{{bomet_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bomet_donkeys" id="bomet_donkeys" value="{{bomet_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>KAKAMEGA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kakamega_exotic_cattle" id="kakamega_exotic_cattle" value="{{kakamega_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kakamega_indigenous_cattle" id="kakamega_indigenous_cattle" value="{{kakamega_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kakamega_sheep" id="kakamega_sheep" value="{{kakamega_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kakamega_goats" id="kakamega_goats" value="{{kakamega_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kakamega_camels" id="kakamega_camels" value="{{kakamega_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="kakamega_donkeys" id="kakamega_donkeys" value="{{kakamega_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>VIHIGA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="vihiga_exotic_cattle" id="vihiga_exotic_cattle" value="{{vihiga_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="vihiga_indigenous_cattle" id="vihiga_indigenous_cattle" value="{{vihiga_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="vihiga_sheep" id="vihiga_sheep" value="{{vihiga_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="vihiga_goats" id="vihiga_goats" value="{{vihiga_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="vihiga_camels" id="vihiga_camels" value="{{vihiga_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="vihiga_donkeys" id="vihiga_donkeys" value="{{vihiga_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>BUNGOMA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bungoma_exotic_cattle" id="bungoma_exotic_cattle" value="{{bungoma_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bungoma_indigenous_cattle" id="bungoma_indigenous_cattle" value="{{bungoma_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bungoma_sheep" id="bungoma_sheep" value="{{bungoma_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bungoma_goats" id="bungoma_goats" value="{{bungoma_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bungoma_camels" id="bungoma_camels" value="{{bungoma_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="bungoma_donkeys" id="bungoma_donkeys" value="{{bungoma_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+<!--                                    <tr>-->
+<!--                                        <td><b>BUSIA</b></td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="busia_exotic_cattle" id="busia_exotic_cattle" value="{{busia_exotic_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="busia_indigenous_cattle" id="busia_indigenous_cattle" value="{{busia_indigenous_cattle}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="busia_sheep" id="busia_sheep" value="{{busia_sheep}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="busia_goats" id="busia_goats" value="{{busia_goats}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="busia_camels" id="busia_camels" value="{{busia_camels}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="busia_donkeys" id="busia_donkeys" value="{{busia_donkeys}}">-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>TOTAL</b></td>
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="total_exotic_cattle" id="total_exotic_cattle" value="{{total_exotic_cattle}}" readonly>-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="total_indigenous_cattle" id="total_indigenous_cattle" value="{{total_indigenous_cattle}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="total_sheep" id="total_sheep" value="{{total_sheep}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="total_goats" id="total_goats" value="{{total_goats}}" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="total_camels" id="total_camels" value="{{total_camels}}" readonly>
+                                            </div>
+                                        </td>
+<!--                                        <td>-->
+<!--                                            <div class="form-group input-group">-->
+<!--                                                <input type="text" class="form-control mb-4" name="total_donkeys" id="total_donkeys" value="{{total_donkeys}}" readonly>-->
+<!--                                            </div>-->
+<!--                                        </td>-->
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c0be9d9e-5feb-41ad-a363-9e7d800979ab" name="Default" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eUCmq4g9sJeTMHi04AWdz0xndj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Python\RVF\rift_valley\templates" />
+      <recent name="D:\Projects\Python\RVF\rift_valley\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Python Projects\rvf\rift_valley\templates" />
+      <recent name="D:\Projects\Python\RVF\rift_valley\templates" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="RVF" type="Python.DjangoServer" factoryName="Django server">
+      <module name="RVF" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="RVF" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c0be9d9e-5feb-41ad-a363-9e7d800979ab" name="Default" comment="" />
+      <created>1588338651989</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588338651989</updated>
+      <workItem from="1591936844483" duration="15266000" />
+      <workItem from="1592025275395" duration="15695000" />
+      <workItem from="1592110919751" duration="1998000" />
+      <workItem from="1592114680262" duration="2242000" />
+      <workItem from="1592203330470" duration="255000" />
+      <workItem from="1592305414466" duration="2460000" />
+      <workItem from="1592368704524" duration="3968000" />
+      <workItem from="1592374637678" duration="5326000" />
+      <workItem from="1592381515389" duration="1383000" />
+      <workItem from="1592544566408" duration="19248000" />
+      <workItem from="1592635953268" duration="4795000" />
+      <workItem from="1592886662723" duration="16638000" />
+      <workItem from="1592976018766" duration="5331000" />
+      <workItem from="1592999066357" duration="1686000" />
+      <workItem from="1593061303160" duration="1283000" />
+      <workItem from="1593065879068" duration="4158000" />
+      <workItem from="1593148968442" duration="7286000" />
+      <workItem from="1593236314207" duration="13842000" />
+      <workItem from="1593668308973" duration="6118000" />
+      <workItem from="1593751436921" duration="18013000" />
+      <workItem from="1593796343269" duration="598000" />
+      <workItem from="1593825358230" duration="19309000" />
+      <workItem from="1593952774429" duration="4300000" />
+      <workItem from="1593966791264" duration="4238000" />
+      <workItem from="1594008843305" duration="23651000" />
+      <workItem from="1594042226256" duration="1603000" />
+      <workItem from="1594096058184" duration="26762000" />
+      <workItem from="1594186173878" duration="12049000" />
+      <workItem from="1594263366367" duration="17885000" />
+      <workItem from="1594294746662" duration="4233000" />
+      <workItem from="1594314943854" duration="1001000" />
+      <workItem from="1594357568582" duration="1454000" />
+      <workItem from="1594366986986" duration="1426000" />
+      <workItem from="1594371375802" duration="591000" />
+      <workItem from="1594613084600" duration="16680000" />
+      <workItem from="1594795146376" duration="2035000" />
+      <workItem from="1594873293053" duration="1202000" />
+      <workItem from="1596100594756" duration="6113000" />
+      <workItem from="1604921882858" duration="1567000" />
+      <workItem from="1605111662437" duration="658000" />
+      <workItem from="1605174295566" duration="315000" />
+      <workItem from="1606310904643" duration="2798000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1605174602267">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605174602267" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1606314368039">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606314368039" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606312395760">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606312395760" />
+  </component>
+</project>

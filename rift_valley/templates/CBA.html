@@ -1,0 +1,1277 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post" style="width: 100%; ">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table-bordered" width="2300px">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                                    <tr>
+                                        <td><b>23March2020 CBK Rate</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Discount rate = 0.0725</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Year</b></td>
+                                        <td><b>0</b></td>
+                                        <td><b>1</b></td>
+                                        <td><b>2</b></td>
+                                        <td><b>3</b></td>
+                                        <td><b>4</b></td>
+                                        <td><b>5</b></td>
+                                        <td><b>6</b></td>
+                                        <td><b>7</b></td>
+                                        <td><b>8</b></td>
+                                        <td><b>9</b></td>
+                                        <td><b>10</b></td>
+                                        <td><b>11</b></td>
+                                        <td><b>12</b></td>
+                                        <td><b>13</b></td>
+                                        <td><b>14</b></td>
+                                        <td><b>15</b></td>
+                                        <td><b>16</b></td>
+                                        <td><b>17</b></td>
+                                        <td><b>18</b></td>
+                                        <td><b>19</b></td>
+                                        <td><b>20</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>ZDU Setup costs (US$)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ZDU_setup_costs_year" id="ZDU_setup_costs_year" value="{{ZDU_setup_costs_year}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>With One Health Programme Benefits (US$)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_0" id="with_health_programme_benefits_year_0" value="{{with_health_programme_benefits_year_0}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_1" id="with_health_programme_benefits_year_1" value="{{with_health_programme_benefits_year_1}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_2" id="with_health_programme_benefits_year_2" value="{{with_health_programme_benefits_year_2}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_3" id="with_health_programme_benefits_year_3" value="{{with_health_programme_benefits_year_3}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_4" id="with_health_programme_benefits_year_4" value="{{with_health_programme_benefits_year_4}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_5" id="with_health_programme_benefits_year_5" value="{{with_health_programme_benefits_year_5}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_6" id="with_health_programme_benefits_year_6" value="{{with_health_programme_benefits_year_6}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_7" id="with_health_programme_benefits_year_7" value="{{with_health_programme_benefits_year_7}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_8" id="with_health_programme_benefits_year_8" value="{{with_health_programme_benefits_year_8}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_9" id="with_health_programme_benefits_year_9" value="{{with_health_programme_benefits_year_9}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_10" id="with_health_programme_benefits_year_10" value="{{with_health_programme_benefits_year_10}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_11" id="with_health_programme_benefits_year_11" value="{{with_health_programme_benefits_year_11}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_12" id="with_health_programme_benefits_year_12" value="{{with_health_programme_benefits_year_12}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_13" id="with_health_programme_benefits_year_13" value="{{with_health_programme_benefits_year_13}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_14" id="with_health_programme_benefits_year_14" value="{{with_health_programme_benefits_year_14}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_15" id="with_health_programme_benefits_year_15" value="{{with_health_programme_benefits_year_15}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_16" id="with_health_programme_benefits_year_16" value="{{with_health_programme_benefits_year_16}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_17" id="with_health_programme_benefits_year_17" value="{{with_health_programme_benefits_year_17}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_18" id="with_health_programme_benefits_year_18" value="{{with_health_programme_benefits_year_18}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_19" id="with_health_programme_benefits_year_19" value="{{with_health_programme_benefits_year_19}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="with_health_programme_benefits_year_20" id="with_health_programme_benefits_year_20" value="{{with_health_programme_benefits_year_20}}">
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Without One Health Programme Benefits (US$)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_0" id="without_health_programme_benefits_year_0" value="{{without_health_programme_benefits_year_0}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_1" id="without_health_programme_benefits_year_1" value="{{without_health_programme_benefits_year_1}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_2" id="without_health_programme_benefits_year_2" value="{{without_health_programme_benefits_year_2}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_3" id="without_health_programme_benefits_year_3" value="{{without_health_programme_benefits_year_3}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_4" id="without_health_programme_benefits_year_4" value="{{without_health_programme_benefits_year_4}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_5" id="without_health_programme_benefits_year_5" value="{{without_health_programme_benefits_year_5}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_6" id="without_health_programme_benefits_year_6" value="{{without_health_programme_benefits_year_6}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_7" id="without_health_programme_benefits_year_7" value="{{without_health_programme_benefits_year_7}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_8" id="without_health_programme_benefits_year_8" value="{{without_health_programme_benefits_year_8}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_9" id="without_health_programme_benefits_year_9" value="{{without_health_programme_benefits_year_9}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_10" id="without_health_programme_benefits_year_10" value="{{without_health_programme_benefits_year_10}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_11" id="without_health_programme_benefits_year_11" value="{{without_health_programme_benefits_year_11}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_12" id="without_health_programme_benefits_year_12" value="{{without_health_programme_benefits_year_12}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_13" id="without_health_programme_benefits_year_13" value="{{without_health_programme_benefits_year_13}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_14" id="without_health_programme_benefits_year_14" value="{{without_health_programme_benefits_year_14}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_15" id="without_health_programme_benefits_year_15" value="{{without_health_programme_benefits_year_15}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_16" id="without_health_programme_benefits_year_16" value="{{without_health_programme_benefits_year_16}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_17" id="without_health_programme_benefits_year_17" value="{{without_health_programme_benefits_year_17}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_18" id="without_health_programme_benefits_year_18" value="{{without_health_programme_benefits_year_18}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_19" id="without_health_programme_benefits_year_19" value="{{without_health_programme_benefits_year_19}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="without_health_programme_benefits_year_20" id="without_health_programme_benefits_year_20" value="{{without_health_programme_benefits_year_20}}">
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Incremental Benefits (US$)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_0" id="incremental_benefits_year_0" value="{{incremental_benefits_year_0}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_1" id="incremental_benefits_year_1" value="{{incremental_benefits_year_1}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_2" id="incremental_benefits_year_2" value="{{incremental_benefits_year_2}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_3" id="incremental_benefits_year_3" value="{{incremental_benefits_year_3}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_4" id="incremental_benefits_year_4" value="{{incremental_benefits_year_4}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_5" id="incremental_benefits_year_5" value="{{incremental_benefits_year_5}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_6" id="incremental_benefits_year_6" value="{{incremental_benefits_year_6}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_7" id="incremental_benefits_year_7" value="{{incremental_benefits_year_7}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_8" id="incremental_benefits_year_8" value="{{incremental_benefits_year_8}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_9" id="incremental_benefits_year_9" value="{{incremental_benefits_year_9}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_10" id="incremental_benefits_year_10" value="{{incremental_benefits_year_10}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_11" id="incremental_benefits_year_11" value="{{incremental_benefits_year_11}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_12" id="incremental_benefits_year_12" value="{{incremental_benefits_year_12}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_13" id="incremental_benefits_year_13" value="{{incremental_benefits_year_13}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_14" id="incremental_benefits_year_14" value="{{incremental_benefits_year_14}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_15" id="incremental_benefits_year_15" value="{{incremental_benefits_year_15}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_16" id="incremental_benefits_year_16" value="{{incremental_benefits_year_16}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_17" id="incremental_benefits_year_17" value="{{incremental_benefits_year_17}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_18" id="incremental_benefits_year_18" value="{{incremental_benefits_year_18}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_19" id="incremental_benefits_year_19" value="{{incremental_benefits_year_19}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="incremental_benefits_year_20" id="incremental_benefits_year_20" value="{{incremental_benefits_year_20}}">
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Discounted benefits (US$)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_0" id="discounted_benefits_year_0" value="{{discounted_benefits_year_0}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_1" id="discounted_benefits_year_1" value="{{discounted_benefits_year_1}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_2" id="discounted_benefits_year_2" value="{{discounted_benefits_year_2}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_3" id="discounted_benefits_year_3" value="{{discounted_benefits_year_3}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_4" id="discounted_benefits_year_4" value="{{discounted_benefits_year_4}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_5" id="discounted_benefits_year_5" value="{{discounted_benefits_year_5}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_6" id="discounted_benefits_year_6" value="{{discounted_benefits_year_6}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_7" id="discounted_benefits_year_7" value="{{discounted_benefits_year_7}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_8" id="discounted_benefits_year_8" value="{{discounted_benefits_year_8}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_9" id="discounted_benefits_year_9" value="{{discounted_benefits_year_9}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_10" id="discounted_benefits_year_10" value="{{discounted_benefits_year_10}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_11" id="discounted_benefits_year_11" value="{{discounted_benefits_year_11}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_12" id="discounted_benefits_year_12" value="{{discounted_benefits_year_12}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_13" id="discounted_benefits_year_13" value="{{discounted_benefits_year_13}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_14" id="discounted_benefits_year_14" value="{{discounted_benefits_year_14}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_15" id="discounted_benefits_year_15" value="{{discounted_benefits_year_15}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_16" id="discounted_benefits_year_16" value="{{discounted_benefits_year_16}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_17" id="discounted_benefits_year_17" value="{{discounted_benefits_year_17}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_18" id="discounted_benefits_year_18" value="{{discounted_benefits_year_18}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_19" id="discounted_benefits_year_19" value="{{discounted_benefits_year_19}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_benefits_year_20" id="discounted_benefits_year_20" value="{{discounted_benefits_year_20}}">
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Annual Programme Costs (US$)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_0" id="annual_programme_costs_year_0" value="{{annual_programme_costs_year_0}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_1" id="annual_programme_costs_year_1" value="{{annual_programme_costs_year_1}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_2" id="annual_programme_costs_year_2" value="{{annual_programme_costs_year_2}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_3" id="annual_programme_costs_year_3" value="{{annual_programme_costs_year_3}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_4" id="annual_programme_costs_year_4" value="{{annual_programme_costs_year_4}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_5" id="annual_programme_costs_year_5" value="{{annual_programme_costs_year_5}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_6" id="annual_programme_costs_year_6" value="{{annual_programme_costs_year_6}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_7" id="annual_programme_costs_year_7" value="{{annual_programme_costs_year_7}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_8" id="annual_programme_costs_year_8" value="{{annual_programme_costs_year_8}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_9" id="annual_programme_costs_year_9" value="{{annual_programme_costs_year_9}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_10" id="annual_programme_costs_year_10" value="{{annual_programme_costs_year_10}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_11" id="annual_programme_costs_year_11" value="{{annual_programme_costs_year_11}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_12" id="annual_programme_costs_year_12" value="{{annual_programme_costs_year_12}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_13" id="annual_programme_costs_year_13" value="{{annual_programme_costs_year_13}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_14" id="annual_programme_costs_year_14" value="{{annual_programme_costs_year_14}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_15" id="annual_programme_costs_year_15" value="{{annual_programme_costs_year_15}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_16" id="annual_programme_costs_year_16" value="{{annual_programme_costs_year_16}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_17" id="annual_programme_costs_year_17" value="{{annual_programme_costs_year_17}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_18" id="annual_programme_costs_year_18" value="{{annual_programme_costs_year_18}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_19" id="annual_programme_costs_year_19" value="{{annual_programme_costs_year_19}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="annual_programme_costs_year_20" id="annual_programme_costs_year_20" value="{{annual_programme_costs_year_20}}">
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Discounted costs (US$)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_0" id="discounted_costs_year_0" value="{{discounted_costs_year_0}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_1" id="discounted_costs_year_1" value="{{discounted_costs_year_1}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_2" id="discounted_costs_year_2" value="{{discounted_costs_year_2}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_3" id="discounted_costs_year_3" value="{{discounted_costs_year_3}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_4" id="discounted_costs_year_4" value="{{discounted_costs_year_4}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_5" id="discounted_costs_year_5" value="{{discounted_costs_year_5}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_6" id="discounted_costs_year_6" value="{{discounted_costs_year_6}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_7" id="discounted_costs_year_7" value="{{discounted_costs_year_7}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_8" id="discounted_costs_year_8" value="{{discounted_costs_year_8}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_9" id="discounted_costs_year_9" value="{{discounted_costs_year_9}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_10" id="discounted_costs_year_10" value="{{discounted_costs_year_10}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_11" id="discounted_costs_year_11" value="{{discounted_costs_year_11}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_12" id="discounted_costs_year_12" value="{{discounted_costs_year_12}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_13" id="discounted_costs_year_13" value="{{discounted_costs_year_13}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_14" id="discounted_costs_year_14" value="{{discounted_costs_year_14}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_15" id="discounted_costs_year_15" value="{{discounted_costs_year_15}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_16" id="discounted_costs_year_16" value="{{discounted_costs_year_16}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_17" id="discounted_costs_year_17" value="{{discounted_costs_year_17}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_18" id="discounted_costs_year_18" value="{{discounted_costs_year_18}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_19" id="discounted_costs_year_19" value="{{discounted_costs_year_19}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_costs_year_20" id="discounted_costs_year_20" value="{{discounted_costs_year_20}}">
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Discounted Net Benefits (US$)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_0" id="discounted_net_benefits_year_0" value="{{discounted_net_benefits_year_0}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_1" id="discounted_net_benefits_year_1" value="{{discounted_net_benefits_year_1}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_2" id="discounted_net_benefits_year_2" value="{{discounted_net_benefits_year_2}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_3" id="discounted_net_benefits_year_3" value="{{discounted_net_benefits_year_3}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_4" id="discounted_net_benefits_year_4" value="{{discounted_net_benefits_year_4}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_5" id="discounted_net_benefits_year_5" value="{{discounted_net_benefits_year_5}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_6" id="discounted_net_benefits_year_6" value="{{discounted_net_benefits_year_6}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_7" id="discounted_net_benefits_year_7" value="{{discounted_net_benefits_year_7}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_8" id="discounted_net_benefits_year_8" value="{{discounted_net_benefits_year_8}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_9" id="discounted_net_benefits_year_9" value="{{discounted_net_benefits_year_9}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_10" id="discounted_net_benefits_year_10" value="{{discounted_net_benefits_year_10}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_11" id="discounted_net_benefits_year_11" value="{{discounted_net_benefits_year_11}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_12" id="discounted_net_benefits_year_12" value="{{discounted_net_benefits_year_12}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_13" id="discounted_net_benefits_year_13" value="{{discounted_net_benefits_year_13}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_14" id="discounted_net_benefits_year_14" value="{{discounted_net_benefits_year_14}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_15" id="discounted_net_benefits_year_15" value="{{discounted_net_benefits_year_15}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_16" id="discounted_net_benefits_year_16" value="{{discounted_net_benefits_year_16}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_17" id="discounted_net_benefits_year_17" value="{{discounted_net_benefits_year_17}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_18" id="discounted_net_benefits_year_18" value="{{discounted_net_benefits_year_18}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_19" id="discounted_net_benefits_year_19" value="{{discounted_net_benefits_year_19}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="discounted_net_benefits_year_20" id="discounted_net_benefits_year_20" value="{{discounted_net_benefits_year_20}}">
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>NPV (US$)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="NPV_year" id="NPV_year" value="{{NPV_year}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>BCR</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="BCR_year" id="BCR_year" value="{{BCR_year}}">
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>IRR</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="IRR_year" id="IRR_year" value="{{IRR_year}}">
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+
+                                    <br/>
+
+                                    <tr>
+                                        <td>20% increase in annual programme costs (US$)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_0" id="increase_in_annual_programme_costs_year_0" value="{{increase_in_annual_programme_costs_year_0}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_1" id="increase_in_annual_programme_costs_year_1" value="{{increase_in_annual_programme_costs_year_1}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_2" id="increase_in_annual_programme_costs_year_2" value="{{increase_in_annual_programme_costs_year_2}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_3" id="increase_in_annual_programme_costs_year_3" value="{{increase_in_annual_programme_costs_year_3}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_4" id="increase_in_annual_programme_costs_year_4" value="{{increase_in_annual_programme_costs_year_4}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_5" id="increase_in_annual_programme_costs_year_5" value="{{increase_in_annual_programme_costs_year_5}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_6" id="increase_in_annual_programme_costs_year_6" value="{{increase_in_annual_programme_costs_year_6}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_7" id="increase_in_annual_programme_costs_year_7" value="{{increase_in_annual_programme_costs_year_7}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_8" id="increase_in_annual_programme_costs_year_8" value="{{increase_in_annual_programme_costs_year_8}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_9" id="increase_in_annual_programme_costs_year_9" value="{{increase_in_annual_programme_costs_year_9}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_10" id="increase_in_annual_programme_costs_year_10" value="{{increase_in_annual_programme_costs_year_10}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_11" id="increase_in_annual_programme_costs_year_11" value="{{increase_in_annual_programme_costs_year_11}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_12" id="increase_in_annual_programme_costs_year_12" value="{{increase_in_annual_programme_costs_year_12}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_13" id="increase_in_annual_programme_costs_year_13" value="{{increase_in_annual_programme_costs_year_13}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_14" id="increase_in_annual_programme_costs_year_14" value="{{increase_in_annual_programme_costs_year_14}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_15" id="increase_in_annual_programme_costs_year_15" value="{{increase_in_annual_programme_costs_year_15}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_16" id="increase_in_annual_programme_costs_year_16" value="{{increase_in_annual_programme_costs_year_16}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_17" id="increase_in_annual_programme_costs_year_17" value="{{increase_in_annual_programme_costs_year_17}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_18" id="increase_in_annual_programme_costs_year_18" value="{{increase_in_annual_programme_costs_year_18}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_19" id="increase_in_annual_programme_costs_year_19" value="{{increase_in_annual_programme_costs_year_19}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="increase_in_annual_programme_costs_year_20" id="increase_in_annual_programme_costs_year_20" value="{{increase_in_annual_programme_costs_year_20}}">
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Discounted costs (US$)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_0" id="extra_discounted_costs_year_0" value="{{extra_discounted_costs_year_0}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_1" id="extra_discounted_costs_year_1" value="{{extra_discounted_costs_year_1}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_2" id="extra_discounted_costs_year_2" value="{{extra_discounted_costs_year_2}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_3" id="extra_discounted_costs_year_3" value="{{extra_discounted_costs_year_3}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_4" id="extra_discounted_costs_year_4" value="{{extra_discounted_costs_year_4}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_5" id="extra_discounted_costs_year_5" value="{{extra_discounted_costs_year_5}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_6" id="extra_discounted_costs_year_6" value="{{extra_discounted_costs_year_6}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_7" id="extra_discounted_costs_year_7" value="{{extra_discounted_costs_year_7}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_8" id="extra_discounted_costs_year_8" value="{{extra_discounted_costs_year_8}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_9" id="extra_discounted_costs_year_9" value="{{extra_discounted_costs_year_9}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_10" id="extra_discounted_costs_year_10" value="{{extra_discounted_costs_year_10}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_11" id="extra_discounted_costs_year_11" value="{{extra_discounted_costs_year_11}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_12" id="extra_discounted_costs_year_12" value="{{extra_discounted_costs_year_12}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_13" id="extra_discounted_costs_year_13" value="{{extra_discounted_costs_year_13}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_14" id="extra_discounted_costs_year_14" value="{{extra_discounted_costs_year_14}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_15" id="extra_discounted_costs_year_15" value="{{extra_discounted_costs_year_15}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_16" id="extra_discounted_costs_year_16" value="{{extra_discounted_costs_year_16}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_17" id="extra_discounted_costs_year_17" value="{{extra_discounted_costs_year_17}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_18" id="extra_discounted_costs_year_18" value="{{extra_discounted_costs_year_18}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_19" id="extra_discounted_costs_year_19" value="{{extra_discounted_costs_year_19}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_discounted_costs_year_20" id="extra_discounted_costs_year_20" value="{{extra_discounted_costs_year_20}}">
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>NPV (US$)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_NPV_year" id="extra_NPV_year" value="{{extra_NPV_year}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>BCR</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="extra_BCR_year" id="extra_BCR_year" value="{{extra_BCR_year}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

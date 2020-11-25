@@ -1,0 +1,329 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+    <div class="col-md-8">
+
+        <style>
+
+        input[type="range"]::-moz-range-track {
+  padding: 0 10px;
+  background: repeating-linear-gradient(to right,
+    #ccc,
+    #ccc 10%,
+    #000 10%,
+    #000 11%,
+    #ccc 11%,
+    #ccc 20%);
+}
+    </style>
+<form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+                        <input type="submit" class="save btn btn-default" value="Run Simulation">
+
+                        <div class="form-group input-group">
+                            <label for="simulation_years">Number of years to run simulation</label>
+                            <input type="range" class="form-control mb-4" name="simulation_years" id="simulation_years" class="slider" min="1" max="20" step="1" list="steplist" value="{{simulation_years}}" data-orientation="vertical">
+                            <p><b><span id="output"></span> Year(s)</b></p>
+                            <datalist id="steplist">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                        </datalist>
+                        </div>
+
+                        <table style="width: 100%;border:1px solid #fff">
+                            <thead>
+
+                                <tr>
+                                    <th>Start plotting (day)</th>
+
+                                    <th>Stop plotting (day)</th>
+
+                                    <th>RNG Seed</th>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="text" class="form-control mb-4" name="start_day" id="start_day" value="{{start_day}}">
+                                        </div>
+                                    </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="stop_day" id="stop_day" value="{{stop_day}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rng_seed" id="rng_seed" value="{{rng_seed}}">
+                                            </div>
+                                        </td>
+
+                                </tr>
+
+
+                            </thead>
+
+                        </table>
+
+                        <table class="table table-bordered" style="width: 100%;">
+                            <thead>
+
+                                <tr>
+                                    <th>Species</th>
+
+                                    <th>Zone 1</th>
+
+                                    <th>Zone 2</th>
+
+                                    <th>Zone 3</th>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <label>Human</label>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_human_zone_1" id="chk_human_zone_1" {{chk_human_zone_1}}>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_human_zone_2" id="chk_human_zone_2" {{chk_human_zone_2}}>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_human_zone_3" id="chk_human_zone_3" {{chk_human_zone_3}}>
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <label>Animal</label>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_animal_zone_1" id="chk_animal_zone_1" {{chk_animal_zone_1}}>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_animal_zone_2" id="chk_animal_zone_2" {{chk_animal_zone_2}}>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_animal_zone_3" id="chk_animal_zone_3" {{chk_animal_zone_3}}>
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <label>Vector A</label>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_vector_A_zone_1" id="chk_vector_A_zone_1" {{chk_vector_A_zone_1}}>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_vector_A_zone_2" id="chk_vector_A_zone_2" {{chk_vector_A_zone_2}}>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_vector_A_zone_3" id="chk_vector_A_zone_3" {{chk_vector_A_zone_3}}>
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <label>Vector B</label>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_vector_B_zone_1" id="chk_vector_B_zone_1" {{chk_vector_B_zone_1}}>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_vector_B_zone_2" id="chk_vector_B_zone_2" {{chk_vector_B_zone_2}}>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_vector_B_zone_3" id="chk_vector_B_zone_3" {{chk_vector_B_zone_3}}>
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <label>Vector C</label>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_vector_C_zone_1" id="chk_vector_C_zone_1" {{chk_vector_C_zone_1}}>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_vector_C_zone_2" id="chk_vector_C_zone_2" {{chk_vector_C_zone_2}}>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_vector_C_zone_3" id="chk_vector_C_zone_3" {{chk_vector_C_zone_3}}>
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <label>Vector D</label>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_vector_D_zone_1" id="chk_vector_D_zone_1" {{chk_vector_D_zone_1}}>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_vector_D_zone_2" id="chk_vector_D_zone_2" {{chk_vector_D_zone_1}}>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="form-group input-group">
+                                            <input type="checkbox" class="form-check-input" name="chk_vector_D_zone_3" id="chk_vector_D_zone_3" {{chk_vector_D_zone_3}}>
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+
+
+                            </thead>
+
+                        </table>
+
+                    </form>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div id="show_results">
+                        <img src="{{ STATIC_URL }}static/equations_pic.png" width="100%" height="400px">
+                        <table class="table table-bordered">
+                             <thead>
+
+                                 <th>
+                                     <tr><b>Sample results based on input</b></tr>
+                                 </th>
+
+                             </thead>
+
+                            <tbody>
+
+                                    <tr>
+                                        <td>Human Results</td>
+                                        <td>Zone 1</td>
+                                        <td>Zone 2</td>
+                                        <td>Zone 3</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Rate of change in the susceptible human compartment</td>
+                                        <td>{{calc}}</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Rate of change in the human exposed (incubating) compartment</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Rate of change in the infective human compartment</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Rate of change in the recovered (immune) human compartment</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+{% endblock %}

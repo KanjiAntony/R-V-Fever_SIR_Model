@@ -1,0 +1,268 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                                    <tr>
+                                        <td><b>Oviposition Rate</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_oviposition_rate" id="vector_A_oviposition_rate" value="{{vector_A_oviposition_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Proportional Vertical Transmission</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_prop_vertical_transmission" id="vector_A_prop_vertical_transmission" value="{{vector_A_prop_vertical_transmission}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Hatching  Rate</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_hatching_rate" id="vector_A_hatching_rate" value="{{vector_A_hatching_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Mortality Rate</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_mortality_rate" id="vector_A_mortality_rate" value="{{vector_A_mortality_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Mortality Rate Infected Eggs Zone 1</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_infected_eggs_zone_1_mortality_rate" id="vector_A_infected_eggs_zone_1_mortality_rate" value="{{vector_A_infected_eggs_zone_1_mortality_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Mortality Rate Infected Eggs Zone 2</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_infected_eggs_zone_2_mortality_rate" id="vector_A_infected_eggs_zone_2_mortality_rate" value="{{vector_A_infected_eggs_zone_2_mortality_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Mortality Rate Infected Eggs Zone 3</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_infected_eggs_zone_3_mortality_rate" id="vector_A_infected_eggs_zone_3_mortality_rate" value="{{vector_A_infected_eggs_zone_3_mortality_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Mortality Rate Uninfected Eggs Zone 1</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_uninfected_eggs_zone_1_mortality_rate" id="vector_A_uninfected_eggs_zone_1_mortality_rate" value="{{vector_A_uninfected_eggs_zone_1_mortality_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Mortality Rate Uninfected Eggs Zone 2</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_uninfected_eggs_zone_2_mortality_rate" id="vector_A_uninfected_eggs_zone_2_mortality_rate" value="{{vector_A_uninfected_eggs_zone_2_mortality_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Mortality Rate Uninfected Eggs Zone 3</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_uninfected_eggs_zone_3_mortality_rate" id="vector_A_uninfected_eggs_zone_3_mortality_rate" value="{{vector_A_uninfected_eggs_zone_3_mortality_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Carrying capacity zone 1</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_carrying_capacity_zone_1" id="vector_A_carrying_capacity_zone_1" value="{{vector_A_carrying_capacity_zone_1}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Carrying capacity zone 2</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_carrying_capacity_zone_2" id="vector_A_carrying_capacity_zone_2" value="{{vector_A_carrying_capacity_zone_2}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Carrying capacity zone 3</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_carrying_capacity_zone_3" id="vector_A_carrying_capacity_zone_3" value="{{vector_A_carrying_capacity_zone_3}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 1 to 2</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_migration_rate_1_to_2" id="vector_A_migration_rate_1_to_2" value="{{vector_A_migration_rate_1_to_2}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 1 to 3</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_migration_rate_1_to_3" id="vector_A_migration_rate_1_to_3" value="{{vector_A_migration_rate_1_to_3}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 2 to 1</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_migration_rate_2_to_1" id="vector_A_migration_rate_2_to_1" value="{{vector_A_migration_rate_2_to_1}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 2 to 3</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_migration_rate_2_to_3" id="vector_A_migration_rate_2_to_3" value="{{vector_A_migration_rate_2_to_3}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 3 to 1</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_migration_rate_3_to_1" id="vector_A_migration_rate_3_to_1" value="{{vector_A_migration_rate_3_to_1}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 3 to 2</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_migration_rate_3_to_2" id="vector_A_migration_rate_3_to_2" value="{{vector_A_migration_rate_3_to_2}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Infection transfer rate from Vector A to human</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_infection_rate_to_human" id="vector_A_infection_rate_to_human" value="{{vector_A_infection_rate_to_human}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Infection transfer rate from Vector A to animal</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_infection_rate_to_animal" id="vector_A_infection_rate_to_animal" value="{{vector_A_infection_rate_to_animal}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Maximum biting rate</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_max_biting_rate" id="vector_A_max_biting_rate" value="{{vector_A_max_biting_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Proportion feeding on human</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_human_feeding_prop" id="vector_A_human_feeding_prop" value="{{vector_A_human_feeding_prop}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Proportion feeding on animals</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vector_A_animal_feeding_prop" id="vector_A_animal_feeding_prop" value="{{vector_A_animal_feeding_prop}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

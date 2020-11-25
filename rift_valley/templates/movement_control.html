@@ -1,0 +1,253 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                                    <tr>
+                                        <td><b>Assumptions:</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <textarea class="form-control mb-4" name="movement_control_assumptions" id="movement_control_assumptions" rows="3">{{movement_control_assumptions}}</textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Item</b></td>
+                                        <td><b>No</b></td>
+                                        <td><b>Unit Cost</b></td>
+                                        <td><b>Salvage value (Kshs)</b></td>
+                                        <td><b>Useful life (yrs)</b></td>
+                                        <td><b>Annual cost (Kshs)</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Police salary & emoluments</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="police_salary_no" id="police_salary_no" value="{{police_salary_no}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="police_salary_unit_cost" id="police_salary_unit_cost" value="{{police_salary_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="police_salary_salvage_value" id="police_salary_salvage_value" value="{{police_salary_salvage_value}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="police_salary_useful_life" id="police_salary_useful_life" value="{{police_salary_useful_life}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="police_salary_annual_cost" id="police_salary_annual_cost" value="{{police_salary_annual_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Roadblock offices</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="roadblock_offices_no" id="roadblock_offices_no" value="{{roadblock_offices_no}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="roadblock_offices_unit_cost" id="roadblock_offices_unit_cost" value="{{roadblock_offices_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="roadblock_offices_salvage_value" id="roadblock_offices_salvage_value" value="{{roadblock_offices_salvage_value}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="roadblock_offices_useful_life" id="roadblock_offices_useful_life" value="{{roadblock_offices_useful_life}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="roadblock_offices_annual_cost" id="roadblock_offices_annual_cost" value="{{roadblock_offices_annual_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Police salary for manning 35 border posts</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="manning_border_police_salary_no" id="manning_border_police_salary_no" value="{{manning_border_police_salary_no}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="manning_border_police_salary_unit_cost" id="manning_border_police_salary_unit_cost" value="{{manning_border_police_salary_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="manning_border_police_salary_salvage_value" id="manning_border_police_salary_salvage_value" value="{{manning_border_police_salary_salvage_value}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="manning_border_police_salary_useful_life" id="manning_border_police_salary_useful_life" value="{{manning_border_police_salary_useful_life}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="manning_border_police_salary_annual_cost" id="manning_border_police_salary_annual_cost" value="{{manning_border_police_salary_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Offices at borderposts</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_offices_no" id="movement_control_offices_no" value="{{movement_control_offices_no}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_offices_unit_cost" id="movement_control_offices_unit_cost" value="{{movement_control_offices_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_offices_salvage_value" id="movement_control_offices_salvage_value" value="{{movement_control_offices_salvage_value}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_offices_useful_life" id="movement_control_offices_useful_life" value="{{movement_control_offices_useful_life}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_offices_annual_cost" id="movement_control_offices_annual_cost" value="{{movement_control_offices_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Landcruisers for border patrol</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_landcruisers_no" id="movement_control_landcruisers_no" value="{{movement_control_landcruisers_no}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_landcruisers_unit_cost" id="movement_control_landcruisers_unit_cost" value="{{movement_control_landcruisers_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_landcruisers_salvage_value" id="movement_control_landcruisers_salvage_value" value="{{movement_control_landcruisers_salvage_value}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_landcruisers_useful_life" id="movement_control_landcruisers_useful_life" value="{{movement_control_landcruisers_useful_life}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_landcruisers_annual_cost" id="movement_control_landcruisers_annual_cost" value="{{movement_control_landcruisers_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Fuel (diesel/year at 60L per week)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_fuel_no" id="movement_control_fuel_no" value="{{movement_control_fuel_no}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_fuel_unit_cost" id="movement_control_fuel_unit_cost" value="{{movement_control_fuel_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_fuel_salvage_value" id="movement_control_fuel_salvage_value" value="{{movement_control_fuel_salvage_value}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_fuel_useful_life" id="movement_control_fuel_useful_life" value="{{movement_control_fuel_useful_life}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_fuel_annual_cost" id="movement_control_fuel_annual_cost" value="{{movement_control_fuel_annual_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>TOTAL</b></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="movement_control_total_cost" id="movement_control_total_cost" value="{{movement_control_total_cost}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

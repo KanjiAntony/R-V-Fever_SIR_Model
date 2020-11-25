@@ -1,0 +1,613 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                                    <tr>
+                                        <td><b>All staff doing this all the time</b></td>
+                                        <td><b>Quantity</b></td>
+                                        <td><b>Unit Cost</b></td>
+                                        <td><b>Total Cost</b></td>
+                                        <td><b>Annual Depreciation</b></td>
+                                        <td><b>Annual cost (KShs)</b></td>
+                                        <td><b>Remarks</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Airtime per month
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Headman/Chief/CBAHW/AHA (15 per county)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="headman_total_quantity" id="headman_total_quantity" value="{{headman_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="headman_unit_cost" id="headman_unit_cost" value="{{headman_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="headman_total_cost" id="headman_total_cost" value="{{headman_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="headman_annual_depreciation" id="headman_annual_depreciation" value="{{headman_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="headman_annual_cost" id="headman_annual_cost" value="{{headman_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="headman_remarks" id="headman_remarks" value="{{headman_remarks}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Veterinarians (10 per county)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="veterinarians_total_quantity" id="veterinarians_total_quantity" value="{{veterinarians_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="veterinarians_unit_cost" id="veterinarians_unit_cost" value="{{veterinarians_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="veterinarians_total_cost" id="veterinarians_total_cost" value="{{veterinarians_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="veterinarians_annual_depreciation" id="veterinarians_annual_depreciation" value="{{veterinarians_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="veterinarians_annual_cost" id="veterinarians_annual_cost" value="{{veterinarians_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="veterinarians_remarks" id="veterinarians_remarks" value="{{veterinarians_remarks}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Livestock production officers (10 per county)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="livestock_production_officers_total_quantity" id="livestock_production_officers_total_quantity" value="{{livestock_production_officers_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="livestock_production_officers_unit_cost" id="livestock_production_officers_unit_cost" value="{{livestock_production_officers_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="livestock_production_officers_total_cost" id="livestock_production_officers_total_cost" value="{{livestock_production_officers_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="livestock_production_officers_annual_depreciation" id="livestock_production_officers_annual_depreciation" value="{{livestock_production_officers_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="livestock_production_officers_annual_cost" id="livestock_production_officers_annual_cost" value="{{livestock_production_officers_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="livestock_production_officers_remarks" id="livestock_production_officers_remarks" value="{{livestock_production_officers_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>CHWs (15 per county)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="CHWs_total_quantity" id="CHWs_total_quantity" value="{{CHWs_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="CHWs_unit_cost" id="CHWs_unit_cost" value="{{CHWs_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="CHWs_total_cost" id="CHWs_total_cost" value="{{CHWs_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="CHWs_annual_depreciation" id="CHWs_annual_depreciation" value="{{CHWs_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="CHWs_annual_cost" id="CHWs_annual_cost" value="{{CHWs_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="CHWs_remarks" id="CHWs_remarks" value="{{CHWs_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Clinicians (10 per county)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="clinicians_total_quantity" id="clinicians_total_quantity" value="{{clinicians_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="clinicians_unit_cost" id="clinicians_unit_cost" value="{{clinicians_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="clinicians_total_cost" id="clinicians_total_cost" value="{{clinicians_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="clinicians_annual_depreciation" id="clinicians_annual_depreciation" value="{{clinicians_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="clinicians_annual_cost" id="clinicians_annual_cost" value="{{clinicians_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="clinicians_remarks" id="clinicians_remarks" value="{{clinicians_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Nurses (10 per county)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="nurses_total_quantity" id="nurses_total_quantity" value="{{nurses_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="nurses_unit_cost" id="nurses_unit_cost" value="{{nurses_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="nurses_total_cost" id="nurses_total_cost" value="{{nurses_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="nurses_annual_depreciation" id="nurses_annual_depreciation" value="{{nurses_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="nurses_annual_cost" id="nurses_annual_cost" value="{{nurses_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="nurses_remarks" id="nurses_remarks" value="{{nurses_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Doctors (5 per county)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="doctors_total_quantity" id="doctors_total_quantity" value="{{doctors_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="doctors_unit_cost" id="doctors_unit_cost" value="{{doctors_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="doctors_total_cost" id="doctors_total_cost" value="{{doctors_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="doctors_annual_depreciation" id="doctors_annual_depreciation" value="{{doctors_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="doctors_annual_cost" id="doctors_annual_cost" value="{{doctors_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="doctors_remarks" id="doctors_remarks" value="{{doctors_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>CHO (1 per county)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="CHO_total_quantity" id="CHO_total_quantity" value="{{CHO_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="CHO_unit_cost" id="CHO_unit_cost" value="{{CHO_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="CHO_total_cost" id="CHO_total_cost" value="{{CHO_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="CHO_annual_depreciation" id="CHO_annual_depreciation" value="{{CHO_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="CHO_annual_cost" id="CHO_annual_cost" value="{{CHO_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="CHO_remarks" id="CHO_remarks" value="{{CHO_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Fuel for ground truthing (KShs/County)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ground_truthing_fuel_total_quantity" id="ground_truthing_fuel_total_quantity" value="{{ground_truthing_fuel_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ground_truthing_fuel_unit_cost" id="ground_truthing_fuel_unit_cost" value="{{ground_truthing_fuel_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ground_truthing_fuel_total_cost" id="ground_truthing_fuel_total_cost" value="{{ground_truthing_fuel_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ground_truthing_fuel_annual_depreciation" id="ground_truthing_fuel_annual_depreciation" value="{{ground_truthing_fuel_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ground_truthing_fuel_annual_cost" id="ground_truthing_fuel_annual_cost" value="{{ground_truthing_fuel_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="ground_truthing_fuel_remarks" id="ground_truthing_fuel_remarks" value="{{ground_truthing_fuel_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Satellite phones for counties with no mobile phone network</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="satellite_phones_total_quantity" id="satellite_phones_total_quantity" value="{{satellite_phones_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="satellite_phones_unit_cost" id="satellite_phones_unit_cost" value="{{satellite_phones_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="satellite_phones_total_cost" id="satellite_phones_total_cost" value="{{satellite_phones_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="satellite_phones_annual_depreciation" id="satellite_phones_annual_depreciation" value="{{satellite_phones_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="satellite_phones_annual_cost" id="satellite_phones_annual_cost" value="{{satellite_phones_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="satellite_phones_remarks" id="satellite_phones_remarks" value="{{satellite_phones_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Lap top Computers (5 per county)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laptop_total_quantity" id="laptop_total_quantity" value="{{laptop_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laptop_unit_cost" id="laptop_unit_cost" value="{{laptop_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laptop_total_cost" id="laptop_total_cost" value="{{laptop_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laptop_annual_depreciation" id="laptop_annual_depreciation" value="{{laptop_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laptop_annual_cost" id="laptop_annual_cost" value="{{laptop_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="laptop_remarks" id="laptop_remarks" value="{{laptop_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Digital pens (20 per county)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="digital_pens_total_quantity" id="digital_pens_total_quantity" value="{{digital_pens_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="digital_pens_unit_cost" id="digital_pens_unit_cost" value="{{digital_pens_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="digital_pens_total_cost" id="digital_pens_total_cost" value="{{digital_pens_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="digital_pens_annual_depreciation" id="digital_pens_annual_depreciation" value="{{digital_pens_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="digital_pens_annual_cost" id="digital_pens_annual_cost" value="{{digital_pens_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="digital_pens_remarks" id="digital_pens_remarks" value="{{digital_pens_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>GIS compartible Cell Phones (20 per county)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="GIS_compartible_phones_total_quantity" id="GIS_compartible_phones_total_quantity" value="{{GIS_compartible_phones_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="GIS_compartible_phones_unit_cost" id="GIS_compartible_phones_unit_cost" value="{{GIS_compartible_phones_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="GIS_compartible_phones_total_cost" id="GIS_compartible_phones_total_cost" value="{{GIS_compartible_phones_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="GIS_compartible_phones_annual_depreciation" id="GIS_compartible_phones_annual_depreciation" value="{{GIS_compartible_phones_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="GIS_compartible_phones_annual_cost" id="GIS_compartible_phones_annual_cost" value="{{GIS_compartible_phones_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="GIS_compartible_phones_remarks" id="GIS_compartible_phones_remarks" value="{{GIS_compartible_phones_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Digital pen and GIS compartible forms (2000 per county)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="GIS_compartible_forms_total_quantity" id="GIS_compartible_forms_total_quantity" value="{{GIS_compartible_forms_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="GIS_compartible_forms_unit_cost" id="GIS_compartible_forms_unit_cost" value="{{GIS_compartible_forms_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="GIS_compartible_forms_total_cost" id="GIS_compartible_forms_total_cost" value="{{GIS_compartible_forms_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="GIS_compartible_forms_annual_depreciation" id="GIS_compartible_forms_annual_depreciation" value="{{GIS_compartible_forms_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="GIS_compartible_forms_annual_cost" id="GIS_compartible_forms_annual_cost" value="{{GIS_compartible_forms_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="GIS_compartible_forms_remarks" id="GIS_compartible_forms_remarks" value="{{GIS_compartible_forms_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Server fees</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="server_fees_total_quantity" id="server_fees_total_quantity" value="{{server_fees_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="server_fees_unit_cost" id="server_fees_unit_cost" value="{{server_fees_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="server_fees_total_cost" id="server_fees_total_cost" value="{{server_fees_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="server_fees_annual_depreciation" id="server_fees_annual_depreciation" value="{{server_fees_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="server_fees_annual_cost" id="server_fees_annual_cost" value="{{server_fees_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="server_fees_remarks" id="server_fees_remarks" value="{{server_fees_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Digital pen licenses (one time apportioned annually)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="digital_pen_licenses_total_quantity" id="digital_pen_licenses_total_quantity" value="{{digital_pen_licenses_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="digital_pen_licenses_unit_cost" id="digital_pen_licenses_unit_cost" value="{{digital_pen_licenses_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="digital_pen_licenses_total_cost" id="digital_pen_licenses_total_cost" value="{{digital_pen_licenses_total_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="digital_pen_licenses_annual_depreciation" id="digital_pen_licenses_annual_depreciation" value="{{digital_pen_licenses_annual_depreciation}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="digital_pen_licenses_annual_cost" id="digital_pen_licenses_annual_cost" value="{{digital_pen_licenses_annual_cost}}">
+                                            </div>
+                                        </td>
+                                         <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="digital_pen_licenses_remarks" id="digital_pen_licenses_remarks" value="{{digital_pen_licenses_remarks}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>TOTAL</b></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="passive_surveillance_total_annual_cost" id="passive_surveillance_total_annual_cost" value="{{passive_surveillance_total_annual_cost}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

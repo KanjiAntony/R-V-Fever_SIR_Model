@@ -1,0 +1,481 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                                    <tr>
+                                        <td><b>Item</b></td>
+                                        <td><b>Quantity Per County</b></td>
+                                        <td><b>Total Quantity</b></td>
+                                        <td><b>Unit Cost</b></td>
+                                        <td><b>Total Cost</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>(a) Headquarter (ZDU) activities</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Design of training materials in 47 languages</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="47lang_training_material_design_per_county_quantity" id="47lang_training_material_design_per_county_quantity" value="{{47lang_training_material_design_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="47lang_training_material_design_total_quantity" id="47lang_training_material_design_total_quantity" value="{{47lang_training_material_design_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="47lang_training_material_design_unit_cost" id="47lang_training_material_design_unit_cost" value="{{47lang_training_material_design_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="47lang_training_material_design_total_cost" id="47lang_training_material_design_total_cost" value="{{47lang_training_material_design_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Print materials (Posters & brochures)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="print_materials_per_county_quantity" id="print_materials_per_county_quantity" value="{{print_materials_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="print_materials_total_quantity" id="print_materials_total_quantity" value="{{print_materials_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="print_materials_unit_cost" id="print_materials_unit_cost" value="{{print_materials_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="print_materials_total_cost" id="print_materials_total_cost" value="{{print_materials_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Radio spots in 15 languages</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="15lang_radiospots_per_county_quantity" id="15lang_radiospots_per_county_quantity" value="{{15lang_radiospots_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="15lang_radiospots_total_quantity" id="15lang_radiospots_total_quantity" value="{{15lang_radiospots_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="15lang_radiospots_unit_cost" id="15lang_radiospots_unit_cost" value="{{15lang_radiospots_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="15lang_radiospots_total_cost" id="15lang_radiospots_total_cost" value="{{15lang_radiospots_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Radio spots in English, Swahili</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="en_swa_radiospots_per_county_quantity" id="en_swa_radiospots_per_county_quantity" value="{{en_swa_radiospots_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="en_swa_radiospots_total_quantity" id="en_swa_radiospots_total_quantity" value="{{en_swa_radiospots_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="en_swa_radiospots_unit_cost" id="en_swa_radiospots_unit_cost" value="{{en_swa_radiospots_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="en_swa_radiospots_total_cost" id="en_swa_radiospots_total_cost" value="{{en_swa_radiospots_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>TV commercials (KBC, Citizen, NTV, KTN, K24)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tv_commercials_per_county_quantity" id="tv_commercials_per_county_quantity" value="{{tv_commercials_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tv_commercials_total_quantity" id="tv_commercials_total_quantity" value="{{tv_commercials_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tv_commercials_unit_cost" id="tv_commercials_unit_cost" value="{{tv_commercials_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="tv_commercials_total_cost" id="tv_commercials_total_cost" value="{{tv_commercials_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Sensitization of HQ & other institutions</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="sensitization_of_HQ_per_county_quantity" id="sensitization_of_HQ_per_county_quantity" value="{{sensitization_of_HQ_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="sensitization_of_HQ_total_quantity" id="sensitization_of_HQ_total_quantity" value="{{sensitization_of_HQ_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="sensitization_of_HQ_unit_cost" id="sensitization_of_HQ_unit_cost" value="{{sensitization_of_HQ_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="sensitization_of_HQ_total_cost" id="sensitization_of_HQ_total_cost" value="{{sensitization_of_HQ_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Distribution of print materials</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="print_materials_distribution_per_county_quantity" id="print_materials_distribution_per_county_quantity" value="{{print_materials_distribution_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="print_materials_distribution_total_quantity" id="print_materials_distribution_total_quantity" value="{{print_materials_distribution_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="print_materials_distribution_unit_cost" id="print_materials_distribution_unit_cost" value="{{print_materials_distribution_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="print_materials_distribution_total_cost" id="print_materials_distribution_total_cost" value="{{print_materials_distribution_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Evaluation of publicity (DSA, transport) in 47 counties</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="publicity_evaluation_per_county_quantity" id="publicity_evaluation_per_county_quantity" value="{{publicity_evaluation_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="publicity_evaluation_total_quantity" id="publicity_evaluation_total_quantity" value="{{publicity_evaluation_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="publicity_evaluation_unit_cost" id="publicity_evaluation_unit_cost" value="{{publicity_evaluation_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="publicity_evaluation_total_cost" id="publicity_evaluation_total_cost" value="{{publicity_evaluation_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>(b) Community sensitization meetings (1 per quarter)</b></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Sensitization meetings (47 counties, 200 attendees)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="community_sensitization_meetings_per_county_quantity" id="community_sensitization_meetings_per_county_quantity" value="{{community_sensitization_meetings_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="community_sensitization_meetings_total_quantity" id="community_sensitization_meetings_total_quantity" value="{{community_sensitization_meetings_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="community_sensitization_meetings_unit_cost" id="community_sensitization_meetings_unit_cost" value="{{community_sensitization_meetings_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="community_sensitization_meetings_total_cost" id="community_sensitization_meetings_total_cost" value="{{community_sensitization_meetings_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Transport (Vehicle maintenance, fuel for 3 days)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="transport_per_county_quantity" id="transport_per_county_quantity" value="{{transport_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="transport_total_quantity" id="transport_total_quantity" value="{{transport_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="transport_unit_cost" id="transport_unit_cost" value="{{transport_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="transport_total_cost" id="transport_total_cost" value="{{transport_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>ZDU Staff DSA (for 3 days)</b></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Translator allowance (5 per county for 2 days)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="translator_allowance_per_county_quantity" id="translator_allowance_per_county_quantity" value="{{translator_allowance_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="translator_allowance_total_quantity" id="translator_allowance_total_quantity" value="{{translator_allowance_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="translator_allowance_unit_cost" id="translator_allowance_unit_cost" value="{{translator_allowance_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="translator_allowance_total_cost" id="translator_allowance_total_cost" value="{{translator_allowance_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Vet epidemiologist</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vet_epidemiologist_per_county_quantity" id="vet_epidemiologist_per_county_quantity" value="{{vet_epidemiologist_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vet_epidemiologist_total_quantity" id="vet_epidemiologist_total_quantity" value="{{vet_epidemiologist_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vet_epidemiologist_unit_cost" id="vet_epidemiologist_unit_cost" value="{{vet_epidemiologist_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="vet_epidemiologist_total_cost" id="vet_epidemiologist_total_cost" value="{{vet_epidemiologist_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Medical epidemiologist</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="medical_epidemiologist_per_county_quantity" id="medical_epidemiologist_per_county_quantity" value="{{medical_epidemiologist_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="medical_epidemiologist_total_quantity" id="medical_epidemiologist_total_quantity" value="{{medical_epidemiologist_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="medical_epidemiologist_unit_cost" id="medical_epidemiologist_unit_cost" value="{{medical_epidemiologist_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="medical_epidemiologist_total_cost" id="medical_epidemiologist_total_cost" value="{{medical_epidemiologist_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Socio-economist</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="socio_economist_per_county_quantity" id="socio_economist_per_county_quantity" value="{{socio_economist_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="socio_economist_total_quantity" id="socio_economist_total_quantity" value="{{socio_economist_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="socio_economist_unit_cost" id="socio_economist_unit_cost" value="{{socio_economist_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="socio_economist_total_cost" id="socio_economist_total_cost" value="{{socio_economist_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Technician</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="technician_per_county_quantity" id="technician_per_county_quantity" value="{{technician_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="technician_total_quantity" id="technician_total_quantity" value="{{technician_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="technician_unit_cost" id="technician_unit_cost" value="{{technician_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="technician_total_cost" id="technician_total_cost" value="{{technician_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Driver</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="driver_per_county_quantity" id="driver_per_county_quantity" value="{{driver_per_county_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="driver_total_quantity" id="driver_total_quantity" value="{{driver_total_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="driver_unit_cost" id="driver_unit_cost" value="{{driver_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="driver_total_cost" id="driver_total_cost" value="{{driver_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>TOTAL</b></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="early_detection_total_cost" id="early_detection_total_cost" value="{{early_detection_total_cost}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

@@ -1,0 +1,532 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                            <h2>Strategic Ring Vaccination</h2>
+
+                                    <tr>
+                                        <td><b>Item</b></td>
+                                        <td><b>No. of animals targeted</b></td>
+                                        <td><b>Unit cost (Kshs)</b></td>
+                                        <td><b>Total cost (Kshs)</b></td>
+                                        <td><b>Price source</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Preventive vaccination for RVF (80% coverage)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_preventive_vacc_no" id="RVF_preventive_vacc_no" value="{{RVF_preventive_vacc_no}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_preventive_vacc_unit_cost" id="RVF_preventive_vacc_unit_cost" value="{{RVF_preventive_vacc_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_preventive_vacc_total_cost" id="RVF_preventive_vacc_total_cost" value="{{RVF_preventive_vacc_total_cost}}">
+                                            </div>
+                                        </td>
+
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_preventive_vacc_print_source" id="RVF_preventive_vacc_print_source" value="{{RVF_preventive_vacc_print_source}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Preventive vaccination for Rabies (80% coverage)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_preventive_vacc_no" id="rabies_preventive_vacc_no" value="{{rabies_preventive_vacc_no}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_preventive_vacc_unit_cost" id="rabies_preventive_vacc_unit_cost" value="{{rabies_preventive_vacc_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_preventive_vacc_total_cost" id="rabies_preventive_vacc_total_cost" value="{{rabies_preventive_vacc_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_preventive_vacc_print_source" id="rabies_preventive_vacc_print_source" value="{{rabies_preventive_vacc_print_source}}">
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Sub-total</b></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="preventive_vaccination_sub_total" id="preventive_vaccination_sub_total" value="{{preventive_vaccination_sub_total}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                     <tr>
+                                        <td><b>Ring vaccination in case of an outbreak</b></td>
+                                     </tr>
+
+                                    <tr>
+                                        <td><b>Disease</b></td>
+                                        <td><b>No. of animals targeted</b></td>
+                                        <td><b>No. of outbreaks/yr</b></td>
+                                        <td><b>Coverage</b></td>
+                                        <td><b>No. of vaccinations</b></td>
+                                        <td><b>Unit cost (Kshs)</b></td>
+                                        <td><b>Total cost (Kshs)</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>RVF</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_ring_vacc_animals_no" id="RVF_ring_vacc_animals_no" value="{{RVF_ring_vacc_animals_no}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_ring_vacc_outbreak_no" id="RVF_ring_vacc_outbreak_no" value="{{RVF_ring_vacc_outbreak_no}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_ring_vacc_coverage" id="RVF_ring_vacc_coverage" value="{{RVF_ring_vacc_coverage}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_ring_vacc_no" id="RVF_ring_vacc_no" value="{{RVF_ring_vacc_no}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_ring_vacc_unit_cost" id="RVF_ring_vacc_unit_cost" value="{{RVF_ring_vacc_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_ring_vacc_total_cost" id="RVF_ring_vacc_total_cost" value="{{RVF_ring_vacc_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Rabies</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_ring_vacc_animals_no" id="rabies_ring_vacc_animals_no" value="{{rabies_ring_vacc_animals_no}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_ring_vacc_outbreak_no" id="rabies_ring_vacc_outbreak_no" value="{{rabies_ring_vacc_outbreak_no}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_ring_vacc_coverage" id="rabies_ring_vacc_coverage" value="{{rabies_ring_vacc_coverage}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_ring_vacc_no" id="rabies_ring_vacc_no" value="{{rabies_ring_vacc_no}}">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_ring_vacc_unit_cost" id="rabies_ring_vacc_unit_cost" value="{{rabies_ring_vacc_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_ring_vacc_total_cost" id="rabies_ring_vacc_total_cost" value="{{rabies_ring_vacc_total_cost}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Total</b></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="disease_ring_vacc_total" id="disease_ring_vacc_total" value="{{disease_ring_vacc_total}}" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td><b>Vaccine Storage</b></td>
+                                     </tr>
+
+                                    <tr>
+                                        <td><b>Item</b></td>
+                                        <td><b>No.</b></td>
+                                        <td><b>Unit cost (Kshs)</b></td>
+                                        <td><b>Total cost (Kshs)</b></td>
+                                    </tr>
+
+                                   <tr>
+                                        <td><i>(a) RVF Vaccine storage</i></td>
+                                     </tr>
+
+                                    <tr>
+                                        <td>Vaccine (doses)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_doses_quantity" id="RVF_vacc_doses_quantity" value="{{RVF_vacc_doses_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_doses_unit_cost" id="RVF_vacc_doses_unit_cost" value="{{RVF_vacc_doses_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_doses_total_cost" id="RVF_vacc_doses_total_cost" value="{{RVF_vacc_doses_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Bioreactors</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_bioreactors_quantity" id="RVF_vacc_bioreactors_quantity" value="{{RVF_vacc_bioreactors_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_bioreactors_unit_cost" id="RVF_vacc_bioreactors_unit_cost" value="{{RVF_vacc_bioreactors_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_bioreactors_total_cost" id="RVF_vacc_bioreactors_total_cost" value="{{RVF_vacc_bioreactors_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Power</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_power_quantity" id="RVF_vacc_power_quantity" value="{{RVF_vacc_power_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_power_unit_cost" id="RVF_vacc_power_unit_cost" value="{{RVF_vacc_power_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_power_total_cost" id="RVF_vacc_power_total_cost" value="{{RVF_vacc_power_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Maintenance</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_maintenance_quantity" id="RVF_vacc_maintenance_quantity" value="{{RVF_vacc_maintenance_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_maintenance_unit_cost" id="RVF_vacc_maintenance_unit_cost" value="{{RVF_vacc_maintenance_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_maintenance_total_cost" id="RVF_vacc_maintenance_total_cost" value="{{RVF_vacc_maintenance_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Labor</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_labor_quantity" id="RVF_vacc_labor_quantity" value="{{RVF_vacc_labor_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_labor_unit_cost" id="RVF_vacc_labor_unit_cost" value="{{RVF_vacc_labor_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_labor_total_cost" id="RVF_vacc_labor_total_cost" value="{{RVF_vacc_labor_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Technical monitoring</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_technical_monitoring_quantity" id="RVF_vacc_technical_monitoring_quantity" value="{{RVF_vacc_technical_monitoring_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_technical_monitoring_unit_cost" id="RVF_vacc_technical_monitoring_unit_cost" value="{{RVF_vacc_technical_monitoring_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_technical_monitoring_total_cost" id="RVF_vacc_technical_monitoring_total_cost" value="{{RVF_vacc_technical_monitoring_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Sub-total</td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="RVF_vacc_storage_sub_title" id="RVF_vacc_storage_sub_title" value="{{RVF_vacc_storage_sub_title}}" readonly>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><i>(b) Rabies Vaccine storage</i></td>
+                                     </tr>
+
+                                    <tr>
+                                        <td>Vaccine (doses)</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_doses_quantity" id="rabies_vacc_doses_quantity" value="{{rabies_vacc_doses_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_doses_unit_cost" id="rabies_vacc_doses_unit_cost" value="{{rabies_vacc_doses_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_doses_total_cost" id="rabies_vacc_doses_total_cost" value="{{rabies_vacc_doses_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Bioreactors</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_bioreactors_quantity" id="rabies_vacc_bioreactors_quantity" value="{{rabies_vacc_bioreactors_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_bioreactors_unit_cost" id="rabies_vacc_bioreactors_unit_cost" value="{{rabies_vacc_bioreactors_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_bioreactors_total_cost" id="rabies_vacc_bioreactors_total_cost" value="{{rabies_vacc_bioreactors_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Power</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_power_quantity" id="rabies_vacc_power_quantity" value="{{rabies_vacc_power_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_power_unit_cost" id="rabies_vacc_power_unit_cost" value="{{rabies_vacc_power_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_power_total_cost" id="rabies_vacc_power_total_cost" value="{{rabies_vacc_power_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Maintenance</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_maintenance_quantity" id="rabies_vacc_maintenance_quantity" value="{{rabies_vacc_maintenance_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_maintenance_unit_cost" id="rabies_vacc_maintenance_unit_cost" value="{{rabies_vacc_maintenance_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_maintenance_total_cost" id="rabies_vacc_maintenance_total_cost" value="{{rabies_vacc_maintenance_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Labor</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_labor_quantity" id="rabies_vacc_labor_quantity" value="{{rabies_vacc_labor_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_labor_unit_cost" id="rabies_vacc_labor_unit_cost" value="{{rabies_vacc_labor_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_labor_total_cost" id="rabies_vacc_labor_total_cost" value="{{rabies_vacc_labor_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Technical monitoring</td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_technical_monitoring_quantity" id="rabies_vacc_technical_monitoring_quantity" value="{{rabies_vacc_technical_monitoring_quantity}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_technical_monitoring_unit_cost" id="rabies_vacc_technical_monitoring_unit_cost" value="{{rabies_vacc_technical_monitoring_unit_cost}}">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_technical_monitoring_total_cost" id="rabies_vacc_technical_monitoring_total_cost" value="{{rabies_vacc_technical_monitoring_total_cost}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Sub-total</b></td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="rabies_vacc_storage_sub_title" id="rabies_vacc_storage_sub_title" value="{{rabies_vacc_storage_sub_title}}" readonly>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Total</b></td>
+
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="strategic_vaccination_total" id="strategic_vaccination_total" value="{{strategic_vaccination_total}}" readonly>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}

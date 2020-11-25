@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RVF Analysis</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="static/rangeslider.css" type='text/css'>
+
+</head>
+<body>
+
+<div class="page-header">
+            <a href="/" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+</div>
+
+{# Navigation Menu #}
+    <header>
+        <div class="navbar navbar-default navbar-static-top
+        {% block nav-style %}{% endblock %}">
+            <div class="container p-none">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle"
+                            data-toggle="collapse"
+                            data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'index' %}">Rift Valley Fever</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                            <li><a href="{% url 'initial' %}">Initial State</a></li>
+                            <li><a href="{% url 'gm' %}" class="p-r-none">General Model Info</a></li>
+                            <li><a href="{% url 'people' %}">People</a></li>
+                            <li><a href="{% url 'animal' %}" class="p-r-none">Animals</a></li>
+                            <li><a href="{% url 'vector_A' %}" class="p-r-none">Vector A</a></li>
+                            <li><a href="{% url 'vector_B' %}" class="p-r-none">Vector B</a></li>
+                            <li><a href="{% url 'vector_C' %}" class="p-r-none">Vector C</a></li>
+                            <li><a href="{% url 'vector_D' %}" class="p-r-none">Vector D</a></li>
+                            <li><a href="https://docs.google.com/spreadsheets/d/1fb_ioi0BLzXDIdOFlTBoYpO1BA5qdw2LPbi07v4fI-Q/edit#gid=0" class="p-r-none" target="_blank">Epi Summary</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="benefitsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Benefits
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="benefitsDropdown">
+                                    <label>Livestock</label>
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'livestock_population' %}" style="width:100%;">Livestock Polulation</a>
+                                    <a class="dropdown-item btn btn-primary" href="#" style="width:100%;">Herdstructure</a>
+                                    <a class="dropdown-item btn btn-primary" href="#" style="width:100%;">Outputs</a>
+                                    <a class="dropdown-item btn btn-primary" href="#" style="width:100%;">Output prices</a>
+                                  <div class="dropdown-divider"></div>
+                                    <label>Human</label>
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'human_population' %}" style="width:100%;">Human Population</a>
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'human_dalys' %}" style="width:100%;">Dalys</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="costsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Costs
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="costsDropdown">
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'early_detection' %}" style="width:100%;">Early detection</a>
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'passive_surveillance' %}" style="width:100%;">Passive surveillance</a>
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'active_surveillance' %}" style="width:100%;">Active surveillance</a>
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'lab_diagnosis' %}" style="width:100%;">Lab diagnosis</a>
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'coord_and_comm' %}" style="width:100%;">Coordination & communication</a>
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'movement_control' %}" style="width:100%;">Movement control</a>
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'strategic_vaccination' %}" style="width:100%;">Strategic vaccination</a>
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'salary_allowances' %}" style="width:100%;">Personnel costs</a>
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'capital_costs' %}" style="width:100%;">Capital costs</a>
+                                    <a class="dropdown-item btn btn-primary" href="{% url 'total_annual_cost' %}" style="width:100%;">Total Annual costs</a>
+                                </div>
+                            </li>
+
+                            <li >
+                                <a href="{% url 'CBA' %}">
+                                  Cost-Benefit Analysis
+                                </a>
+                            </li>
+
+                            <li >
+                               <a href="{% url 'sensitivity_analysis' %}">
+                                  Sensitivity Analysis
+                                </a>
+                            </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div class="content container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div id="general_info">
+                        {% block page_content %}{% endblock %}
+                    </div>
+
+                </div>
+
+
+            </div>
+</div>
+
+{% block footer_javascript %}
+        {% block footer_javascript_site %}
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="{{ STATIC_URL }}static/rangeslider.js"></script>
+<script>
+    // // Initialize a new plugin instance for all
+    // // e.g. $('input[type="range"]') elements.
+    // $('input[type="range"]').rangeslider();
+    //
+    // // Destroy all plugin instances created from the
+    // // e.g. $('input[type="range"]') elements.
+    // $('input[type="range"]').rangeslider('destroy');
+    //
+    // // Update all rangeslider instances for all
+    // // e.g. $('input[type="range"]') elements.
+    // // Usefull if you changed some attributes e.g. `min` or `max` etc.
+    // $('input[type="range"]').rangeslider('update', true);
+
+    var slider = document.getElementById("simulation_years");
+    var output = document.getElementById("output");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+</script>
+{% endblock footer_javascript_site %}
+        {% block footer_javascript_section %}{% endblock footer_javascript_section %}
+        {% block footer_javascript_page %}{% endblock footer_javascript_page %}
+    {% endblock footer_javascript %}
+</body>
+</html>

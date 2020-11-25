@@ -1,0 +1,247 @@
+{% extends 'index.html' %}
+
+{% block page_content %}
+
+                    <form action = "" method = "post">
+                        {% csrf_token %}
+                        {{form.as_p }}
+
+                        <table class="table table-bordered">
+                             <thead>
+
+
+                             </thead>
+
+                            <tbody>
+
+                                    <tr>
+                                        <td><b>Birth Rate non-infected</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_birth_rate_non_infected" id="animal_birth_rate_non_infected" value="{{animal_birth_rate_non_infected}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Population abortion due to RVF</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_RVF_pop_abortion" id="animal_RVF_pop_abortion" value="{{animal_RVF_pop_abortion}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Natural Mortality Rate</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_natural_mortality_rate" id="animal_natural_mortality_rate" value="{{animal_natural_mortality_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Carrying capacity zone 1</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_carrying_capacity_zone_1" id="animal_carrying_capacity_zone_1" value="{{animal_carrying_capacity_zone_1}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Carrying capacity zone 2</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_carrying_capacity_zone_2" id="animal_carrying_capacity_zone_2" value="{{animal_carrying_capacity_zone_2}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Carrying capacity zone 3</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_carrying_capacity_zone_3" id="animal_carrying_capacity_zone_3" value="{{animal_carrying_capacity_zone_3}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Average Length Incubation Period</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_avg_incubation_period" id="animal_avg_incubation_period" value="{{animal_avg_incubation_period}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Average Length Infective Period</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_avg_infective_period" id="animal_avg_infective_period" value="{{animal_avg_infective_period}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Average Length Immune Period</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_avg_immune_period" id="animal_avg_immune_period" value="{{animal_avg_immune_period}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Disease-specific mortality rate</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_disease_specific_mort_rate" id="animal_disease_specific_mort_rate" value="{{animal_disease_specific_mort_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 1 to 2</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_migration_rate_1_to_2" id="animal_migration_rate_1_to_2" value="{{animal_migration_rate_1_to_2}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 1 to 3</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_migration_rate_1_to_3" id="animal_migration_rate_1_to_3" value="{{animal_migration_rate_1_to_3}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 2 to 1</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_migration_rate_2_to_1" id="animal_migration_rate_2_to_1" value="{{animal_migration_rate_2_to_1}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 2 to 3</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_migration_rate_2_to_3" id="animal_migration_rate_2_to_3" value="{{animal_migration_rate_2_to_3}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 3 to 1</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_migration_rate_3_to_1" id="animal_migration_rate_3_to_1" value="{{animal_migration_rate_3_to_1}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Migration rate from zone 3 to 2</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_migration_rate_3_to_2" id="animal_migration_rate_3_to_2" value="{{animal_migration_rate_3_to_2}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Infection transfer rate from animal to human</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_infection_rate_to_human" id="animal_infection_rate_to_human" value="{{animal_infection_rate_to_human}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Infection transfer rate from animal to Vector A</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_infection_rate_to_vector_A" id="animal_infection_rate_to_vector_A" value="{{animal_infection_rate_to_vector_A}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Infection transfer rate from animal to Vector B</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_infection_rate_to_vector_B" id="animal_infection_rate_to_vector_B" value="{{animal_infection_rate_to_vector_B}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Infection transfer rate from animal to Vector C</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_infection_rate_to_vector_C" id="animal_infection_rate_to_vector_C" value="{{animal_infection_rate_to_vector_C}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Infection transfer rate from animal to Vector D</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_infection_rate_to_vector_D" id="animal_infection_rate_to_vector_D" value="{{animal_infection_rate_to_vector_D}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Maximum supported biting rate</b></td>
+                                        <td>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control mb-4" name="animal_max_biting_rate" id="animal_max_biting_rate" value="{{animal_max_biting_rate}}">
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><input type="submit" class="save btn btn-default" value="Save Information"></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </form>
+
+{% endblock %}
