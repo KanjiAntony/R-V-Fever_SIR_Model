@@ -1,8 +1,4 @@
-dist: xenial
-
 language: python
-
-cache: pip
 
 python:
     - "3.8"
@@ -13,6 +9,5 @@ matrix:
 
 install:
     - pip install pipenv --upgrade-strategy=only-if-needed
-    - pipenv install --dev
     - pip install gspread
     - pip install pymongo
