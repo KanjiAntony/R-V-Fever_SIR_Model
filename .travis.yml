@@ -5,10 +5,7 @@ language: python
 cache: pip
 
 python:
-    - "3.6"
-    - "3.7"
     - "3.8"
-    - "nightly"
 
 matrix:
     allow_failures:
@@ -17,6 +14,5 @@ matrix:
 install:
     - pip install pipenv --upgrade-strategy=only-if-needed
     - pipenv install --dev
-
-script:
-    - bash scripts/test.sh
+    - pip install gspread
+    - pip install pymongo
