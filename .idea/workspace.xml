@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0be9d9e-5feb-41ad-a363-9e7d800979ab" name="Default" comment="" />
+    <list default="true" id="c0be9d9e-5feb-41ad-a363-9e7d800979ab" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +51,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../data structures" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -163,6 +165,9 @@
       <workItem from="1605111662437" duration="658000" />
       <workItem from="1605174295566" duration="315000" />
       <workItem from="1606310904643" duration="3639000" />
+      <workItem from="1606378514862" duration="1158000" />
+      <workItem from="1606410102941" duration="600000" />
+      <workItem from="1606550121686" duration="639000" />
     </task>
     <servers />
   </component>
@@ -191,10 +196,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1605174602267">
+    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1606411728392">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605174602267" />
+    <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606411728392" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1606314368039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
