@@ -3,6 +3,9 @@ language: python
 python:
     - "3.8"
 
+script:
+    - pytest
+
 matrix:
     allow_failures:
         - python: "nightly"
@@ -11,3 +14,4 @@ install:
     - pip install pipenv --upgrade-strategy=only-if-needed
     - pip install gspread
     - pip install pymongo
+
